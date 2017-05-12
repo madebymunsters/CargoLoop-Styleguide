@@ -1,0 +1,105 @@
+<article role="article" id="offsets" class="guide__section-group-container">
+  <div class="guide__section-group">
+    <h3 class="title">Offsets</h3>
+    <p class="text">Offsets help to push elements away from one another when extra space or a gap is needed. Offsets are used similar to columns, but they leave a gap between two elements.</p>
+  </div>
+  <div class="guide__section-group card guide-layout__card">
+    <ul class="row guide-layout__list-lg">
+      <li class="guide-layout__item-lg"></li>
+      <li class="guide-layout__item-lg"></li>
+      <li class="guide-layout__item-lg"></li>
+      <li class="guide-layout__item-lg"></li>
+      <li class="guide-layout__item-lg"></li>
+      <li class="guide-layout__item-lg"></li>
+      <li class="guide-layout__item-lg"></li>
+      <li class="guide-layout__item-lg"></li>
+      <li class="guide-layout__item-lg"></li>
+      <li class="guide-layout__item-lg"></li>
+      <li class="guide-layout__item-lg"></li>
+      <li class="guide-layout__item-lg"></li>
+    </ul>
+    <ul class="row guide-layout__list-lg">
+      <li class="guide-layout__item-md"></li>
+      <li class="guide-layout__item-md"></li>
+      <li class="guide-layout__item-md"></li>
+      <li class="guide-layout__item-md"></li>
+      <li class="guide-layout__item-md"></li>
+      <li class="guide-layout__item-md"></li>
+      <li class="guide-layout__item-md"></li>
+      <li class="guide-layout__item-md"></li>
+      <li class="guide-layout__item-md"></li>
+    </ul>
+    <ul class="row guide-layout__list-lg">
+      <li class="guide-layout__item-sm"></li>
+      <li class="guide-layout__item-sm"></li>
+      <li class="guide-layout__item-sm"></li>
+      <li class="guide-layout__item-sm"></li>
+    </ul>
+    <ul class="row guide-layout__list">
+      <li class="columns-1__l offset-1__l guide-layout__item">1</li>
+      <li class="columns-1__l offset-1__l guide-layout__item">1</li>
+      <li class="columns-1__l offset-1__l guide-layout__item">1</li>
+      <li class="columns-1__l offset-1__l guide-layout__item">1</li>
+      <li class="columns-1__l offset-1__l guide-layout__item">1</li>
+      <li class="columns-1__l offset-1__l guide-layout__item">1</li>
+    </ul>
+    <ul class="row guide-layout__list">
+      <li class="columns-3__m columns-4__l guide-layout__item">4 Lg / 3 Md</li>
+      <li class="columns-3__m offset-3__m columns-4__l offset-4__l guide-layout__item">4 Lg / 3 Md </li>
+    </ul>
+    <ul class="row guide-layout__list">
+      <li class="columns-2__s columns-6__l guide-layout__item">6 Lg / 2 Sm</li>
+      <li class="columns-1__s offset-1__s columns-3__l offset-3__l guide-layout__item">6 Lg / 2 Sm</li>
+    </ul>
+  </div>
+  <div class="guide__section-group">
+    <h4 class="content-section__label">Sample Code</h4>
+<% code("html") do %>
+  <!-- Sample 1 -->
+  <ul class="row">
+    <li class="columns-1__l offset-1__l">1</li>
+    <li class="columns-1__l offset-1__l">1</li>
+    <li class="columns-1__l offset-1__l">1</li>
+    <li class="columns-1__l offset-1__l">1</li>
+    <li class="columns-1__l offset-1__l">1</li>
+    <li class="columns-1__l offset-1__l">1</li>
+  </ul>
+
+  <!-- Sample 2 -->
+  <ul class="row">
+    <li class="columns-3__m columns-4__l">4 Lg / 3 Md</li>
+    <li class="columns-3__m offset-3__m columns-4__l offset-4__l">4 Lg / 3 Md </li>
+  </ul>
+
+  <!-- Sample 3 -->
+  <ul class="row">
+    <li class="columns-2__s columns-6__l">6 Lg / 2 Sm</li>
+    <li class="columns-1__s offset-1__s columns-3__l offset-3__l">3 Lg / 1 Sm</li>
+  </ul>
+<% end %><br/>
+  </div>
+  <div class="guide__section-group">
+    <h4 class="content-section__label">HTML Guidelines</h4>
+    <p>This table gives you a quick overview of the CSS classes that can be applied to create a grid layout.</p>
+    <table class="table">
+      <thead class="table-guide__head">
+        <th class="table-guide__head-item">Class Name</th>
+        <th class="table-guide__head-item">Usage</th>
+      </thead>
+      <tbody class="table-guide__body">
+        <tr>
+          <td class="table-guide__body-item" style="width:30%">.offset-#{$column}__s</td>
+          <td class="table-guide__body-item">This should be applied to the element you want to push away from another small element. <% code("html") do %><div class"offset-2__s"></div><% end %></td>
+        </tr>
+        <tr>
+          <td class="table-guide__body-item" style="width:30%">.offset-#{$column}__m</td>
+          <td class="table-guide__body-item">This should be applied to the element you want to push away from another medium element. <% code("html") do %><div class"offset-3__m"></div><% end %></td>
+        </tr>
+        <tr>
+          <td class="table-guide__body-item" style="width:30%">.offset-#{$column}__l</td>
+          <td class="table-guide__body-item">This should be applied to the element you want to push away from another large element. <% code("html") do %><div class"offset-6__l"></div><% end %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</article>

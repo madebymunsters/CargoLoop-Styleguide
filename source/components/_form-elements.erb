@@ -1,6 +1,117 @@
 <article  role="article" id="form-elements" class="guide__section-group-container">
   <div class="guide__section-group">
     <h3 class="title">Form Elements</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vehicula quis dui eget euismod. Etiam in libero sit amet libero vulputate placerat. Curabitur in posuere augue, at porta dolor.</p>
+    <p>Form elements can be used for various reasons within the interface. They can be used to collect and store information or they could be used to lookup / search for specific assets. There are several types of form elements and all have been documented below.</p>
+  </div>
+  <div class="guide__section-group">
+    <ul>
+      <li class="row">
+        <label>Basic Text Input</label>
+        <input type="text" placeholder="Placeholder text" />
+      </li>
+      <li class="row">
+        <label>Disabled Text Input</label>
+        <input type="text" placeholder="Placeholder text" disabled />
+      </li>
+      <li class="row">
+        <label class="input--error">Error Text Input</label>
+        <input type="text" placeholder="Placeholder text" class="input--error" />
+      </li>
+      <li class="row">
+        <label class="input--success">Success Text Input</label>
+        <input type="text" placeholder="Placeholder text" class="input--success" />
+      </li>
+      <li class="row">
+        <label>Search Input</label>
+        <input type="search" placeholder="Placeholder text" />
+      </li>
+      <li class="row">
+        <label>Select Input</label>
+        <select>
+          <option>Option 1</option>
+          <option>Option 2</option>
+          <option>Option 3</option>
+        </select>
+      </li>
+      <li class="row">
+        <label>
+          <input type="radio" />
+          Radio Label Text
+        </label>
+      </li>
+      <li class="row">
+        <label>
+          <input type="checkbox" />
+          Checkbox Label Text
+        </label>
+      </li>
+    </ul>
+  </div>
+  <div class="guide__section-group">
+    <h6 class="label">Sample Code</h6>
+<% code("html") do %>
+  <!-- Basic Text Input -->
+  <label>Basic Text Input</label>
+  <input type="text" placeholder="Placeholder text" />
+
+  <!-- Disabled Text Input -->
+  <label>Disabled Text Input</label>
+  <input type="text" placeholder="Placeholder text" disabled />
+
+  <!-- Error Text Input -->
+  <label class="input--error">Error Text Input</label>
+  <input type="text" placeholder="Placeholder text" class="input--error" />
+
+  <!-- Success Text Input -->
+  <label class="input--success">Success Text Input</label>
+  <input type="text" placeholder="Placeholder text" class="input--success" />
+
+  <!-- Select Input -->
+  <select>
+    <option>Option 1</option>
+    <option>Option 2</option>
+    <option>Option 3</option>
+  </select>
+
+  <!-- Radio Input -->
+  <label>
+    <input type="radio" />
+    Radio Label Text
+  </label>
+
+  <!-- Checkbox Input -->
+  <label>
+    <input type="checkbox" />
+    Checkbox Label Text
+  </label>
+<% end %><br/>
+  </div>
+  <div class="guide__section-group">
+    <h6 class="label">HTML Guidelines</h6>
+    <p>This table gives you a quick overview of the CSS classes that can be applied to add inline error messages to form elements.</p>
+    <table class="table">
+      <thead class="table-guide__head">
+        <th class="table-guide__head-item">Class Name</th>
+        <th class="table-guide__head-item">Usage</th>
+      </thead>
+      <tbody class="table-guide__body">
+        <tr>
+          <td class="table-guide__body-item" style="width:30%">.input--error</td>
+          <td class="table-guide__body-item">Place this class on the label that corresponds with the input that contains the error. <% code("html") do %> <label class="form__label input--error">Form Label</label> <% end %></td>
+        </tr>
+        <tr>
+          <td class="table-guide__body-item" style="width:30%">input.input--error</td>
+          <td class="table-guide__body-item">Place this class on the input that contains the error. <% code("html") do %> <input type="text" placeholder="Placeholder text here" class="input--error" /> <% end %></td>
+        </tr>
+        <tr>
+          <td class="table-guide__body-item" style="width:30%">.input--success</td>
+          <td class="table-guide__body-item">Place this class on the label that corresponds with the input that contains the accepted content. <% code("html") do %> <label class="form__label input--error">Form Label</label> <% end %></td>
+        </tr>
+        <tr>
+          <td class="table-guide__body-item" style="width:30%">input.input--success</td>
+          <td class="table-guide__body-item">Place this class on the input that contains the accepted content. <% code("html") do %> <input type="text" placeholder="Placeholder text here" class="input--error" /> <% end %></td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </article>

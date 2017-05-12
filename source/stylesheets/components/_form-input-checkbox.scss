@@ -1,0 +1,76 @@
+// Form Input Checkbox Component Stylesheet
+// ============================================
+
+// Variables
+$checkbox-background:                   $white-base;
+$checkbox-border:                       2px solid $grey-base;
+$checkbox-border-radius:                1px;
+$checkbox-cursor:                       pointer;
+$checkbox-dimensions:                   17px;
+$checkbox-display:                      inline-block;
+$checkbox-margin:                       0 5px 0 0;
+$checkbox-padding:                      0;
+$checkbox-position:                     relative;
+$checkbox-transition:                   all 0.2s ease-in;
+$checkbox-v-align:                      bottom;
+
+$checkbox-checked-background:           $blue-base;
+$checkbox-checked-border:               2px solid $blue-base;
+
+$checkbox-background-disabled:          $grey-base;
+$checkbox-background-disabled-checked:  $grey-base;
+$checkbox-border-disabled:              $grey-dark;
+
+
+// Structure
+input[type="checkbox"],
+input[type="checkbox"]:focus {
+  @include position($checkbox-position);
+  @include transition();
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: $checkbox-background;
+  border: $checkbox-border;
+  border-radius: $checkbox-border-radius;
+  display: $checkbox-display;
+  height: $checkbox-dimensions;
+  margin: $checkbox-margin;
+  outline: none;
+  padding: $checkbox-padding;
+  vertical-align: $checkbox-v-align;
+  width: $checkbox-dimensions;
+
+  &:hover{
+    border: $checkbox-checked-border;
+    cursor: $checkbox-cursor;
+  }
+}
+
+input[type="checkbox"]:checked {
+  background-color: $checkbox-checked-background;
+  border: $checkbox-checked-border;
+
+  &:after{
+    @include position(absolute, 0 0 null 0);
+    background: image-url('images/icons/icons-functional/icon-checkmark.svg') no-repeat center center;
+    background-size: 10px;
+    content: '';
+    height: 100%;
+    text-align: center;
+    transition: $checkbox-transition;
+    width: 100%;
+  }
+}
+
+.checkbox--label {
+  @include position(relative);
+
+  &.checkbox--label__small {
+    @include position(relative);
+    @include s-foxtrot;
+  }
+
+  span {
+    @include position(absolute, 2px null null null);
+  }
+}

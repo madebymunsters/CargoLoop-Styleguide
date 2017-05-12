@@ -30,6 +30,14 @@ set :relative_links, false
 
 # Build-specific configuration
 configure :build do
+  target_env = ENV['TARGET'] || ''
+  case target_env.to_s.downcase
+  when 'prod'
+    config[:root_url] = '/BakeSmart-Styleguide/'
+  else
+    config[:root_url] = '/'
+  end
+
   activate :minify_css
   activate :minify_javascript
   activate :minify_html

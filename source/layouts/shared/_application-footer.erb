@@ -1,0 +1,27 @@
+<footer role="footer" aria-label="Pattern library footer" class="guide__footer">
+  <div class="container">
+    <div class="row margin-bottom--charlie">
+      <% link_to "#{config[:root_url] ? config[:root_url] : '/'}", class: 'guide__navigation-logo' do %>
+        <%= image_tag 'logos/logo-color.png', alt: 'BakeSmart Logo' %>
+      <% end %>
+    </div>
+    <div class="row">
+      <div class="guide__footer-bottom--left">
+        <ul class="guide__navigation-list">
+          <% data.page_navigation.topbar_navigation.each do |i| %>
+            <li class="guide__navigation-item">
+              <%= link_to i.title, i.url, class: 'link--secondary' %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+      <div class="guide__footer-bottom--right">
+        <ul class="guide__navigation-list">
+          <li class="guide__navigation-item">
+            <%= link_to 'Version: 1.0.0', 'https://github.com/BakeSmart/BakeSmart-Styleguide', target: '_blank', class: 'link--secondary' %>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>

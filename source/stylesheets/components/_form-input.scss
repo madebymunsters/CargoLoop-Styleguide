@@ -1,0 +1,109 @@
+// Form Input Component Stylesheet
+// ========================================
+
+
+// Variables
+$form-input-background:          $white-base;
+$form-input-border:              1px solid $grey-base;;
+$form-input-border-radius:       2px;
+$form-input-color:               $black-base;
+$form-input-color-placeholder:   $grey-base;
+$form-input-height:              45px;
+$form-input-margin:              0 0 $spacer-delta;
+$form-input-padding:             ($spacer-echo * 2);
+$form-input-transition:          border-color 0.4s, ease;
+
+$form-input-background-active:   $white-base;
+$form-input-border-active:       1px solid $blue-base;
+$form-input-box-shadow-active:   0 0 5px 0 rgba(11, 11, 11, 0.10);
+
+$form-input-background-inactive: $grey-base;
+$form-input-border-inactive:     1px solid $grey-alt-2;
+
+$form-input-error-background:    $red-base;
+
+$form-input-success-background:  $green-base;
+
+
+// Structure
+#{$all-text-inputs},
+.input--text
+input,
+select {
+  @include font-type($primary-sans-serif, normal, 400);
+  @include s-foxtrot;
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: $form-input-background;
+  border: $form-input-border;
+  border-radius: $form-input-border-radius;
+  color: $form-input-color;
+  height: $form-input-height;
+  margin: $form-input-margin;
+  padding: $form-input-padding;
+  transition: $form-input-transition;
+  width: 100%;
+
+  @include placeholder {
+    color: $form-input-color-placeholder;
+    font-style: italic;
+  }
+
+  &:focus,
+  &:active {
+    border-color: $form-input-border-active;
+    box-shadow: $form-input-box-shadow-active;
+  }
+
+  &:focus {
+    background-color: $form-input-background-active;
+    border: $form-input-border-active;
+    outline: none;
+  }
+
+  &:hover {
+    border: $form-input-border-active;
+  }
+
+  &:active {
+    border: $form-input-border-active;
+    background-color: $form-input-background-active;
+  }
+
+  &:disabled {
+    background-color: $form-input-background-inactive;
+    border: $form-input-border-inactive;
+    color: $grey-dark;
+    cursor: not-allowed;
+
+    @include placeholder {
+      color: $grey-alt-2;
+      font-style: italic;
+    }
+  }
+}
+
+textarea {
+  height: $form-input-height * 2;
+  padding: $form-input-padding;
+}
+
+
+// Form Input Modifiers
+input.input--error {
+  background: $white-base image-url('images/icons/icons-functional/icon-error.svg') no-repeat 99% center;
+  border-color: $form-input-error-background;
+
+  &:hover {
+    border-color: $form-input-error-background;
+  }
+}
+
+input.input--success {
+  background: $white-base image-url('images/icons/icons-functional/icon-success.svg') no-repeat 99% center;
+  border-color: $form-input-success-background;
+
+  &:hover {
+    border-color: $form-input-success-background;
+  }
+}

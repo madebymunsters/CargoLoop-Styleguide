@@ -1,0 +1,76 @@
+// Form Input Radio Component Stylesheet
+// ========================================
+
+// Variables
+$radio-background:                   $white-base;
+$radio-border:                       2px solid $grey-base;
+$radio-border-radius:                30em;
+$radio-cursor:                       pointer;
+$radio-dimensions:                   17px;
+$radio-display:                      inline-block;
+$radio-margin:                       0 5px 0 0;
+$radio-padding:                      0;
+$radio-position:                     relative;
+$radio-transition:                   all 0.2s ease-in;
+$radio-v-align:                      bottom;
+
+$radio-checked-background:           $blue-base;
+$radio-checked-border:               2px solid $blue-base;
+$radio-checked-margin:               0 auto;
+$radio-checked-size:                 70%;
+
+$radio-background-disabled:          $grey-base;
+$radio-background-disabled-checked:  $grey-base;
+$radio-border-disabled:              $grey-dark;
+
+
+// Structure
+input[type="radio"],
+input[type="radio"]:focus {
+  @include position($radio-position);
+  @include transition();
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: $radio-background;
+  border: $radio-border;
+  border-radius: $radio-border-radius;
+  display: $radio-display;
+  height: $radio-dimensions;
+  margin: $radio-margin;
+  outline: none;
+  padding: $radio-padding;
+  vertical-align: $radio-v-align;
+  width: $radio-dimensions;
+
+  &:hover{
+    border: $radio-checked-border;
+    cursor: $radio-cursor;
+  }
+}
+
+input[type="radio"]:checked {
+
+  &:after{
+    @include position(absolute, 2px 0 null 0);
+    background-color: $radio-checked-background;
+    border-radius: $radio-border-radius;
+    content: " ";
+    height: $radio-checked-size;
+    margin: $radio-checked-margin;
+    transition: $radio-transition;
+    width: $radio-checked-size;
+  }
+}
+
+.radio--label {
+  @include position(relative);
+
+  &.radio--label__small {
+    @include position(relative);
+    @include s-foxtrot;
+  }
+
+  span {
+    @include position(absolute, 2px null null null);
+  }
+}

@@ -5,7 +5,7 @@ title: BakeSmart - Pattern Library
   <div class="container">
     <div class="guide__section-header">
       <h1 id="welcome-message" class="header--primary">BakeSmart's Pattern Library</h1>
-      <p>Welcome to BakeSmart's pattern library. A component-driven library that's core focus is to provide develpers and designers with the necessary pieces to build and maintain the evolving interface. The libary consists of four main pieces: elements, components, layout and resources. Similar to BakeSmart's interface, the pattern library is continuing to grow and evolve. To ensure you have the most update pieces, check back from time to time.</p>
+      <p>Welcome to BakeSmart's pattern library. A component-driven library that's core focus is to provide develpers and designers with the necessary pieces to build and maintain the evolving interface. The libary consists of four main pieces: elements, components, layout and resources. Similar to BakeSmart's interface, the pattern library will continue to grow and evolve as new elements are needed.</p>
     </div>
   </div>
 </header>
@@ -20,7 +20,7 @@ title: BakeSmart - Pattern Library
     </div>
     <aside role="complementary" class="guide__section-aside">
       <nav role="navigation">
-        <label>Section Nav</label>
+        <label class="margin-bottom--delta">Section Navigation</label>
         <ul>
           <% data.page_navigation.elements_navigation.each do |i| %>
             <li>
@@ -33,7 +33,7 @@ title: BakeSmart - Pattern Library
   </div>
 </section>
 <!-- Components -->
-<section role="region" aria-label="BakeSmart Pattern Library Elements" id="components" class="guide__section">
+<section role="region" aria-label="BakeSmart Pattern Library Components" id="components" class="guide__section">
   <header class="guide__section-header">
     <h2>Components</h2>
   </header>
@@ -44,10 +44,13 @@ title: BakeSmart - Pattern Library
       <%= partial 'components/cards' %>
       <%= partial 'components/chips' %>
       <%= partial 'components/form-elements' %>
+      <%= partial 'components/links' %>
+      <%= partial 'components/tabs' %>
+      <%= partial 'components/tooltips' %>
     </div>
     <aside role="complementary" class="guide__section-aside">
       <nav role="navigation">
-        <label>Section Nav</label>
+        <label class="margin-bottom--delta">Section Navigation</label>
         <ul>
           <% data.page_navigation.components_navigation.each do |i| %>
             <li>
@@ -60,5 +63,37 @@ title: BakeSmart - Pattern Library
   </div>
 </section>
 <!-- Layout -->
-
+<section role="region" aria-label="BakeSmart Pattern Library Layout" id="layout" class="guide__section">
+  <header class="guide__section-header">
+    <h2>Layout</h2>
+  </header>
+  <div class="row">
+    <div class="guide__section-content">
+      <%= partial 'layout/grid' %>
+      <%= partial 'layout/offsets' %>
+    </div>
+    <aside role="complementary" class="guide__section-aside">
+      <nav role="navigation">
+        <label class="margin-bottom--delta">Section Navigation</label>
+        <ul>
+          <% data.page_navigation.layout_navigation.each do |i| %>
+            <li>
+              <%= link_to i.title, i.url %>
+            </li>
+          <% end %>
+        </ul>
+      </nav>
+    </aside>
+  </div>
+</section>
 <!-- Resources -->
+<section role="region" aria-label="BakeSmart Pattern Library Resources" id="resources" class="guide__section">
+  <header class="guide__section-header">
+    <h2>Resources</h2>
+  </header>
+  <div class="row">
+    <div class="guide__section-content">
+      Coming Soon
+    </div>
+  </div>
+</section>

@@ -4,7 +4,7 @@
 
 // Variabeles
 $form-label-color:          $black-base;
-$form-label-display:        block;
+$form-label-display:        inline-block;
 $form-label-margin:         $spacer-echo;
 $form-label-transform:      capitalize;
 
@@ -44,11 +44,6 @@ label,
 }
 
 // Label Modifiers
-.input--error,
-.input--success {
-  margin: $form-label-msg-margin;
-}
-
 .input--error {
   color: $form-label-error-color;
 }

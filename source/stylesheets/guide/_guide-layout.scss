@@ -1,0 +1,84 @@
+// Style Guide Layout View Styles
+// ========================================
+
+// Variables
+$guide-layout-list-margin:      0 0 $spacer-alpha;
+$guide-layout-list-position:    relative;
+
+$guide-layout-item-bg:          $white-base;
+$guide-layout-item-border:      $border-bravo;
+$guide-layout-item-padding:     $spacer-delta;
+$guide-layout-item-radius:      2px;
+$guide-layout-item-text-align:  center;
+
+$guide-layout-grid-bg:          lighten($orange-base, 45%);
+$guide-layout-grid-border:      1px dashed $orange-base;
+
+
+// Structure
+.guide-layout__card {
+  overflow: hidden;
+}
+
+.guide-layout__list {
+  @include position($guide-layout-list-position);
+
+  &:not(:last-child) {
+    margin: $guide-layout-list-margin;
+  }
+}
+
+.guide-layout__item {
+  background-color: $guide-layout-item-bg;
+  border: $guide-layout-item-border;
+  border-radius: $guide-layout-item-radius;
+  padding: $guide-layout-item-padding;
+  text-align: $guide-layout-item-text-align;
+}
+
+.guide-layout__item-lg,
+.guide-layout__item-md,
+.guide-layout__item-sm {
+  @include position($guide-layout-list-position, -40px null null null);
+
+  &::before {
+    @include position(absolute, 0 0 0 0);
+    background: $guide-layout-grid-bg;
+    border-left: $guide-layout-grid-border;
+    border-right: $guide-layout-grid-border;
+    content: " ";
+    height: 2000px;
+    width: 100%;
+  }
+}
+
+.guide-layout__item-sm {
+  @include span-columns(1 of 4);
+  display: block;
+
+  @include media($medium) {
+    display: none;
+  }
+}
+
+.guide-layout__item-md {
+  @include span-columns(1 of 9);
+  display: none;
+
+  @include media($medium) {
+    display: block;
+  }
+
+  @include media($large) {
+    display: none;
+  }
+}
+
+.guide-layout__item-lg {
+  @include span-columns(1 of 12);
+  display: none;
+
+  @include media($large) {
+    display: block;
+  }
+}

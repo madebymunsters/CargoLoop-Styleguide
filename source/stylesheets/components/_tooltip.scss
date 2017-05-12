@@ -1,0 +1,82 @@
+// Tooltip Component Stylesheet
+// ========================================
+
+
+// Variables
+$tooltip-margin:             0 auto;
+$tooltip-offset:             null null 20px null;
+$tooltip-opacity-0:          0;
+$tooltip-opacity-1:          1;
+$tooltip-position:           absolute;
+$tooltip-transition:         opacity 0.35s ease-in-out;
+$tooltip-visibiltiy:         visible;
+$tooltip-width-sm:           250px;
+$tooltip-width-md:           350px;
+$tooltip-z-index:            10;
+
+$tooltip-item-display:       inline-block;
+$tooltip-item-position:      relative;
+
+$tooltip-icon-cords:         -5px null null null;
+$tooltip-icon-fill:          $black-base;
+$tooltip-icon-position:      relative;
+$tooltip-icon-size:          15px;
+
+$tooltip-text-color:         $black-base;
+$tooltip-text-line-height:   normal;
+$tooltip-text-shadow-color:  rgba(0, 0, 0, 0.15);
+$tooltip-text-shadow-spread: 0 5px 10px;
+
+
+// Structure
+.tooltip__item {
+  @include position($tooltip-item-position);
+  display: $tooltip-item-display;
+
+  &:focus,
+  &:hover .tooltip {
+    opacity: $tooltip-opacity-1;
+    visibility: $tooltip-visibiltiy;
+  }
+
+  .tooltip__label,
+  .tooltip__icon {
+    display: $tooltip-item-display;
+    cursor: help;
+  }
+
+  .tooltip__icon {
+    @include position($tooltip-icon-position, $tooltip-icon-cords);
+    height: $tooltip-icon-size;
+    width: $tooltip-icon-size;
+
+    & #app-icon {
+      fill: $tooltip-icon-fill;
+    }
+  }
+}
+
+.tooltip {
+  @extend .card--shadow;
+  @extend .card--md;
+  @include position($tooltip-position, $tooltip-offset);
+  opacity: $tooltip-opacity-0;
+  right: calc(100% - 235px);
+  transition: $tooltip-transition;
+  visibility: hidden;
+  width: $tooltip-width-sm;
+  z-index: $tooltip-z-index;
+
+  @include media($large) {
+    right: calc(100% - 285px);
+    width: $tooltip-width-md;
+  }
+
+  .tooltip__text {
+    @include font-type($primary-sans-serif, normal, 400);
+    @include s-golf;
+    line-height: $tooltip-text-line-height;
+    margin: 0;
+    text-transform: none;
+  }
+}

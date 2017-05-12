@@ -23,3 +23,15 @@ components_navigation:
     url: '#chips'
   - title: Form Elements
     url: '#form-elements'
+  - title: Links
+    url: '#links'
+  - title: Tabs
+    url: '#tabs'
+  - title: Tooltips
+    url: '#tooltips'
+
+layout_navigation:
+  - title: Grid
+    url: '#grid'
+  - title: Offsets
+    url: '#offsets'

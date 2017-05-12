@@ -1,0 +1,18 @@
+// Link Variables Settings Stylesheet
+// ========================================
+
+// Buttons Standard
+$links: (
+  'primary': (
+    color: $blue-base
+  ),
+  'secondary': (
+    color: $grey-alt
+  ),
+  'danger': (
+    color: $red-base
+  ),
+  'disabled': (
+    color: $grey-alt-2
+  )
+);

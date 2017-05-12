@@ -3,7 +3,7 @@
     <div class="row">
       <div class="columns-4__s columns-9__m columns-12__l">
         <div class="application-topbar__left">
-          <% link_to '/', class: 'application-topbar__link' do %>
+          <% link_to "#{config[:root_url] ? config[:root_url] : '/'}", class: 'application-topbar__link' do %>
             <%= image_tag 'images/logos/logo-color.png', alt: 'BakeSmart Logo', class: 'logo' %>
           <% end %>
         </div>
@@ -11,7 +11,7 @@
           <ul class="application-topbar__list">
             <% data.page_navigation.topbar_navigation.each do |i| %>
               <li class="application-topbar__item">
-                <%= link_to i.title, i.url, class: 'application-topbar__link' %>
+                <%= link_to i.title, i.url, class: 'application-topbar__link application-top__scroll-link' %>
               </li>
             <% end %>
           </ul>

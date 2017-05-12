@@ -1,0 +1,153 @@
+<article role="article" id="grid" class="guide__section-group-container">
+  <div class="guide__section-group">
+    <h3 class="title">Grid</h3>
+    <p class="text">While the core structure of the site is not built on a grid, interior components use a 12 column grid to create clean, clear spacing. There are four core grid breakpoints: small, medium, large and extra-large. Each is used to dedicate space to elements depending on the viewport's width.</p>
+  </div>
+  <div class="guide__section-group">
+    <div class="container card guide-layout__card">
+      <ul class="row guide-layout__list-lg">
+        <li class="guide-layout__item-lg"></li>
+        <li class="guide-layout__item-lg"></li>
+        <li class="guide-layout__item-lg"></li>
+        <li class="guide-layout__item-lg"></li>
+        <li class="guide-layout__item-lg"></li>
+        <li class="guide-layout__item-lg"></li>
+        <li class="guide-layout__item-lg"></li>
+        <li class="guide-layout__item-lg"></li>
+        <li class="guide-layout__item-lg"></li>
+        <li class="guide-layout__item-lg"></li>
+        <li class="guide-layout__item-lg"></li>
+        <li class="guide-layout__item-lg"></li>
+      </ul>
+      <ul class="row guide-layout__list-lg">
+        <li class="guide-layout__item-md"></li>
+        <li class="guide-layout__item-md"></li>
+        <li class="guide-layout__item-md"></li>
+        <li class="guide-layout__item-md"></li>
+        <li class="guide-layout__item-md"></li>
+        <li class="guide-layout__item-md"></li>
+        <li class="guide-layout__item-md"></li>
+        <li class="guide-layout__item-md"></li>
+        <li class="guide-layout__item-md"></li>
+      </ul>
+      <ul class="row guide-layout__list-lg">
+        <li class="guide-layout__item-sm"></li>
+        <li class="guide-layout__item-sm"></li>
+        <li class="guide-layout__item-sm"></li>
+        <li class="guide-layout__item-sm"></li>
+      </ul>
+      <ul class="row guide-layout__list">
+        <li class="columns-1__l guide-layout__item">1</li>
+        <li class="columns-1__l guide-layout__item">1</li>
+        <li class="columns-1__l guide-layout__item">1</li>
+        <li class="columns-1__l guide-layout__item">1</li>
+        <li class="columns-1__l guide-layout__item">1</li>
+        <li class="columns-1__l guide-layout__item">1</li>
+        <li class="columns-1__l guide-layout__item">1</li>
+        <li class="columns-1__l guide-layout__item">1</li>
+        <li class="columns-1__l guide-layout__item">1</li>
+        <li class="columns-1__l guide-layout__item">1</li>
+        <li class="columns-1__l guide-layout__item">1</li>
+        <li class="columns-1__l guide-layout__item">1</li>
+      </ul>
+      <ul class="row guide-layout__list">
+        <li class="columns-2__l guide-layout__item">2</li>
+        <li class="columns-2__l guide-layout__item">2</li>
+        <li class="columns-2__l guide-layout__item">2</li>
+        <li class="columns-2__l guide-layout__item">2</li>
+        <li class="columns-2__l guide-layout__item">2</li>
+        <li class="columns-2__l guide-layout__item">2</li>
+      </ul>
+      <ul class="row guide-layout__list">
+        <li class="columns-3__l guide-layout__item">3</li>
+        <li class="columns-3__l guide-layout__item">3</li>
+        <li class="columns-3__l guide-layout__item">3</li>
+        <li class="columns-3__l guide-layout__item">3</li>
+      </ul>
+      <ul class="row guide-layout__list">
+        <li class="columns-3__m columns-4__l guide-layout__item">4 Lg / 3 Md</li>
+        <li class="columns-3__m columns-4__l guide-layout__item">4 Lg / 3 Md</li>
+        <li class="columns-3__m columns-4__l guide-layout__item">4 Lg / 3 Md</li>
+      </ul>
+      <ul class="row guide-layout__list">
+        <li class="columns-2__s columns-6__l guide-layout__item">6 Lg / 2 Sm</li>
+        <li class="columns-2__s columns-6__l guide-layout__item">6 Lg / 2 Sm</li>
+      </ul>
+    </div>
+  </div>
+  <div class="guide__section-group">
+    <h6 class="label">Sample Code</h6>
+<% code("html") do %>
+  <!-- Varibles -->
+  $small: Viewport with min-width of 320px
+  $medium: Viewport with min-width of 720px
+  $large: Viewport with min-width of 1024px
+  $extra-large: Viewport with min-width of 1200px
+
+  $container: Max-width is 1140px
+  $gutter: Width is 25px
+  $column: Width is 65px
+
+  <!-- Sample 1 -->
+  <ul class="row">
+    <li class="columns-1__l">1</li>
+    <li class="columns-1__l">1</li>
+    <li class="columns-1__l">1</li>
+    <li class="columns-1__l">1</li>
+    <li class="columns-1__l">1</li>
+    <li class="columns-1__l">1</li>
+    <li class="columns-1__l">1</li>
+    <li class="columns-1__l">1</li>
+    <li class="columns-1__l">1</li>
+    <li class="columns-1__l">1</li>
+    <li class="columns-1__l">1</li>
+    <li class="columns-1__l">1</li>
+  </ul>
+
+  <!-- Sample 2 -->
+  <ul class="row">
+    <li class="columns-3__m columns-4__l">4 Lg / 3 Md</li>
+    <li class="columns-3__m columns-4__l">4 Lg / 3 Md</li>
+    <li class="columns-3__m columns-4__l">4 Lg / 3 Md</li>
+  </ul>
+
+  <!-- Sample 3 -->
+  <ul class="row">
+    <li class="columns-2__s columns-6__l">6 Lg / 2 Sm</li>
+    <li class="columns-2__s columns-6__l">6 Lg / 2 Sm</li>
+  </ul>
+<% end %><br/>
+  </div>
+  <div class="guide__section-group">
+    <h6 class="label">HTML Guidelines</h6>
+    <p>This table gives you a quick overview of the CSS classes that can be applied to create a grid layout.</p>
+    <table class="table-guide">
+      <thead class="table-guide__head">
+        <th class="table-guide__head-item">Class Name</th>
+        <th class="table-guide__head-item">Usage</th>
+      </thead>
+      <tbody class="table-guide__body">
+        <tr>
+          <td class="table-guide__body-item" style="width:25%">.container</td>
+          <td class="table-guide__body-item">This should be applied to the element you want to set the max-width of the view on. Very rarely used in Roundup. <% code("html") do %><div class"container"></div><% end %></td>
+        </tr>
+        <tr>
+          <td class="table-guide__body-item" style="width:25%">.row</td>
+          <td class="table-guide__body-item">This should be applied to the element that contains a column layout. It sets a clearfix on the column layout and forces any content outside of the element below the floating columns. <% code("html") do %><div class"row"></div><% end %></td>
+        </tr>
+        <tr>
+          <td class="table-guide__body-item" style="width:25%">.columns-#{$column}__s</td>
+          <td class="table-guide__body-item">This should be applied to the element you want to take on the small viewport column layout. <% code("html") do %><div class"columns-4__s"></div><% end %></td>
+        </tr>
+        <tr>
+          <td class="table-guide__body-item" style="width:25%">.columns-#{$column}__m</td>
+          <td class="table-guide__body-item">This should be applied to the element you want to take on the medium viewport column layout. <% code("html") do %><div class"columns-9__m"></div><% end %></td>
+        </tr>
+        <tr>
+          <td class="table-guide__body-item" style="width:25%">.columns-#{$column}__l</td>
+          <td class="table-guide__body-item">This should be applied to the element you want to take on the large viewport column layout. <% code("html") do %><div class"columns-12__l"></div><% end %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</article>

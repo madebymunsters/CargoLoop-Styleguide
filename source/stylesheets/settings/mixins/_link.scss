@@ -1,0 +1,8 @@
+// Link Mixin Setting Stylesheet
+// ========================================
+
+// Button Standard
+@mixin link($color-value) {
+  @include font-type($primary-sans-serif, normal, 400);
+  color: $color-value;
+}

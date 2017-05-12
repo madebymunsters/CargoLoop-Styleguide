@@ -1,0 +1,81 @@
+<article  role="article" id="tabs" class="guide__section-group-container">
+  <div class="guide__section-group">
+    <h3 class="title">Tabs</h3>
+    <p>Do you need to split a complex view up to make it more manageable? Just use tabs. This component should be used as an in-page navigation tool. Tabs are meant to split complicated views up into simplified subviews that allow a user to focus in on one specific task.</p>
+  </div>
+  <div class="guide__section-group">
+    <div class="tabs">
+      <ul class="tab__list">
+        <li class="tab__item is-active" data-tab="tab-1">Active Customers</li>
+        <li class="tab__item" data-tab="tab-2">Archived Customers</li>
+      </ul>
+    </div>
+    <div id="tab-1" class="tab__content is-active">
+      Tab Content 1
+    </div>
+    <div id="tab-2" class="tab__content">
+      Tab Content 2
+    </div>
+  </div>
+  <div class="guide__section-group">
+    <h6 class="label">Sample Code</h6>
+<% code("html") do %>
+  <!-- Tab List -->
+  <div class="tabs">
+    <ul class="tab__list">
+      <li class="tab__item is-active" data-tab="tab-1">Edit Scenario</li>
+      <li class="tab__item" data-tab="tab-2">Scenario Flow</li>
+      <li class="tab__item" data-tab="tab-3">Scenario History</li>
+      <li class="tab__item" data-tab="tab-4">Settings</li>
+    </ul>
+  </div>
+
+  <!-- Tab Panes -->
+  <div id="tab-1" class="tab__content is-active">
+    Tab Content 1
+  </div>
+  <div id="tab-2" class="tab__content">
+    Tab Content 2
+  </div>
+  <div id="tab-3" class="tab__content">
+    Tab Content 3
+  </div>
+  <div id="tab-4" class="tab__content">
+    Tab Content 4
+  </div>
+</div>
+<% end %><br/>
+  </div>
+  <div class="guide__section-group">
+    <h6 class="label">HTML Guidelines</h6>
+    <p>This table gives you a quick overview of the CSS classes that can be applied to create a tab group.</p>
+    <table class="table-guide">
+      <thead class="table-guide__head">
+        <th class="table-guide__head-item">Class Name</th>
+        <th class="table-guide__head-item">Usage</th>
+      </thead>
+      <tbody class="table-guide__body">
+        <tr>
+          <td class="table-guide__body-item" style="width:30%">.tabs</td>
+          <td class="table-guide__body-item">This should be applied to the parent element that wraps all of the tabs. <% code("html") do %><div class"tabs"></div><% end %></td>
+        </tr>
+        <tr>
+          <td class="table-guide__body-item" style="width:30%">.tab__list</td>
+          <td class="table-guide__body-item">This should be applied to the unordered list element that contains the tab navigation list. <% code("html") do %><ul class"tab__list"></ul><% end %></td>
+        </tr>
+        <tr>
+          <td class="table-guide__body-item" style="width:30%">.tab__item</td>
+          <td class="table-guide__body-item">This should be applied to the list element that contains the tab navigation link. <% code("html") do %><li class"tab__item"></li><% end %></td>
+        </tr>
+        <tr>
+          <td class="table-guide__body-item" style="width:30%">.tab__content</td>
+          <td class="table-guide__body-item">This should be applied to the element that contains a tab's content. <% code("html") do %><div class"tab__content"></p><% end %></td>
+        </tr>
+        <tr>
+          <td class="table-guide__body-item" style="width:30%">.is-active</td>
+          <td class="table__body-item">This should be applied to the element that is active or displaying. <% code("html") do %><div class"tab__content is-active"></p><% end %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</article>

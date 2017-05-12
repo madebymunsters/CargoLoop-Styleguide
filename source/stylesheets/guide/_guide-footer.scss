@@ -1,0 +1,43 @@
+// Style Guide Footer Stylesheets
+// ========================================
+
+// Variables
+$guide-footer-border:           $border-bravo;
+$guide-footer-margin:           ($spacer-alpha * 2) 0 0;
+$guide-footer-padding:          $spacer-alpha $spacer-charlie;
+
+$guide-footer-bottom-display:   inline-block;
+$guide-footer-bottom-float:     right;
+
+$guide-footer-logo-width:       160px;
+
+
+// Structure
+.guide__footer {
+  border-top: $guide-footer-border;
+  margin: $guide-footer-margin;
+  padding: $guide-footer-padding;
+
+  @include media($extra-large) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.guide__footer-bottom--left,
+.guide__footer-bottom--right {
+  display: $guide-footer-bottom-display;
+}
+
+.guide__footer-bottom--right {
+  float: $guide-footer-bottom-float;
+}
+
+.guide__navigation-logo img {
+  width: $guide-footer-logo-width;
+}
+
+.guide__navigation-item {
+  display: inline-block;
+  margin: 0 $spacer-charlie 0 0;
+}

@@ -1,0 +1,20 @@
+// Link Component Stylesheet
+// ========================================
+
+// Variables
+$link-cursor-disabled:  not-allowed;
+
+
+// Structure
+@each $link, $styles in $links {
+  $color:   map-get($styles, color);
+
+  .link--#{$link} {
+    @include link($color);
+
+    // Disabled Button
+    @if $link == 'disabled' {
+      cursor: $link-cursor-disabled;
+    }
+  }
+}
