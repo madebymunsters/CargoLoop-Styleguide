@@ -4,16 +4,20 @@
 // Reset
 @import "reset";
 
-// Variables
+// Global Variables
 @import "variables/colors";
-@import "variables/alerts";
-@import "variables/borders";
-@import "variables/grid";
 @import "variables/spacers";
 @import "variables/typography";
 
+// Component Variables
+@import "variables/alerts";
+@import "variables/borders";
+@import "variables/buttons";
+@import "variables/grid";
+
 // Mixins
 @import "mixins/alert";
+@import "mixins/button";
 @import "mixins/card";
 @import "mixins/grid";
 @import "mixins/misc";

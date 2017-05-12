@@ -37,6 +37,10 @@ $guide-section-header-margin:         $spacer-charlie;
     @include span-columns(8 of 12);
   }
 
+  .guide__section-group-container {
+    margin-bottom: $spacer-bravo;
+  }
+
   .guide__section-group {
     @include row;
     margin-bottom: $spacer-charlie;
@@ -54,5 +58,19 @@ $guide-section-header-margin:         $spacer-charlie;
   @include media($large) {
     @include span-columns(3 of 12);
     @include shift(1 of 12);
+  }
+}
+
+// Guide List
+.guide__list {
+  @extend .row;
+
+  .guide__item {
+    @include span-columns(4 of 4);
+
+    @include media($medium) {
+      @include omega(4n);
+      @include span-columns(2 of 8);
+    }
   }
 }

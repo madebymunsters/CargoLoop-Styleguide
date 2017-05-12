@@ -1,0 +1,52 @@
+// Style Guide Table Stylesheet
+// ========================================
+
+// Variables
+$guide-table-margin:            $spacer-charlie  0 0;
+$guide-table-width:             100%;
+
+$guide-table-head-bg:           $grey-base;
+
+$guide-table-head-item-color:   $grey-dark;
+$guide-table-head-item-weight:  700;
+
+$guide-table-item-border:       $border-bravo;
+$guide-table-item-line-height:  20px;
+$guide-table-item-padding:      $spacer-delta;
+$guide-table-item-text-align:   left;
+$guide-table-item-v-align:      middle;
+
+
+// Structure
+.table-guide {
+  margin: $guide-table-margin;
+  width: $guide-table-width;
+}
+
+.table-guide__head {
+  background-color: $guide-table-head-bg;
+
+  .table-guide__head-item {
+    @include s-golf;
+    color: $guide-table-head-item-color;
+    font-weight: $guide-table-head-item-weight;
+    padding: $guide-table-item-padding;
+    text-align: $guide-table-item-text-align;
+  }
+}
+
+.table-guide__body {
+
+  .table-guide__body-item {
+    @include s-golf;
+    border-bottom: $guide-table-item-border;
+    line-height: $guide-table-item-line-height;
+    padding: $guide-table-item-padding;
+    vertical-align: $guide-table-item-v-align;
+  }
+
+  .table-guide__body-item--top {
+    display: block;
+    margin-bottom: $spacer-echo;
+  }
+}

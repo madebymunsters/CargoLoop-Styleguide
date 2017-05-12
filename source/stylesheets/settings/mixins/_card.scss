@@ -11,6 +11,7 @@
   $card-box-shadow:     0 0 40px 0 rgba(205,216,221,0.40);
   $card-margin:         0 0 $spacer-delta;
   $card-padding:        $spacer-charlie;
+  $card-width:          100%;
 
 
   // Structure
@@ -20,6 +21,7 @@
   display: inline-block;
   margin: $card-margin;
   padding: $card-padding;
+  width: $card-width;
 
   // Card Modifier
   @if $shadow {

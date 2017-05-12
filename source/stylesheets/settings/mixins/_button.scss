@@ -1,0 +1,76 @@
+// Button Mixin Setting Stylesheet
+// ========================================
+
+// Button Standard
+@mixin button($background-value, $border-color-value, $color-value) {
+
+  // Variables
+  $button-box-shadow-remove:          0 0 0 transparent;
+
+  $button-border:                     1px solid;
+  $button-display:                    inline-block;
+  $button-line-height:                normal;
+  $button-padding:                    $spacer-delta $spacer-bravo;
+  $button-radius:                     2px;
+  $button-text-align:                 center;
+  $button-text-transform:             capitalize;
+  $button-transition:                 background-color 0.3s ease-in-out;
+
+  $button-hover-cursor:               pointer;
+  $button-hover-opacity:              1;
+
+  $button-focus-border:               inherit;
+  $button-focus-outline:              none;
+  $button-focus-text-decoration:      none;
+
+  // Properties
+  @include font-type($primary-sans-serif, normal, 700);
+  @include s-foxtrot;
+  background-color: $background-value;
+  border: $button-border;
+  border-color: $border-color-value;
+  border-radius: $button-radius;
+  color: $color-value;
+  display: $button-display;
+  height: auto;
+  line-height: $button-line-height;
+  padding: $button-padding;
+  text-align: $button-text-align;
+  text-decoration: none;
+  text-transform: $button-text-transform;
+  transition: $button-transition;
+  -webkit-appearance: none;
+
+  &:hover {
+    background-color: darken($background-value, 5%);
+    cursor: $button-hover-cursor;
+    opacity: $button-hover-opacity;
+  }
+
+  &:focus {
+    border: $button-focus-border;
+    outline: $button-focus-outline;
+    text-decoration: $button-focus-text-decoration;
+  }
+
+  &:active {
+    opacity: 1;
+  }
+
+  &:focus,
+  &:active {
+    box-shadow: $button-box-shadow-remove;
+    border: 1px solid $border-color-value;
+  }
+}
+
+// Button Sizes
+@mixin button-size(
+  $display-value, $font-size-value, $padding-value, $width-value) {
+
+  // Properties
+  display: $display-value;
+  font-size: $font-size-value;
+  padding: $padding-value;
+  width: $width-value;
+}

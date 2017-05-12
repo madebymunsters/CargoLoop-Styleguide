@@ -5,22 +5,17 @@
 $buttons: (
   'primary': (
     background-color: $orange-base,
-    border-color: darken($orange-base, 10%),
+    border-color: darken($orange-base, 15%),
     color: $white-base
   ),
   'secondary': (
     background-color: $blue-base,
-    border-color: darken($blue-base, 10%),
-    color: $white-base
-  ),
-  'warning': (
-    background-color: $yellow-base,
-    border-color: darken($yellow-base, 10%),
+    border-color: darken($blue-base, 15%),
     color: $white-base
   ),
   'danger': (
     background-color: $red-base,
-    border-color: darken($red-base, 10%),
+    border-color: darken($red-base, 20%),
     color: $white-base
   ),
   'disabled': (
