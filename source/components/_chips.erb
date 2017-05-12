@@ -1,0 +1,107 @@
+<article  role="article" id="chips" class="guide__section-group-container">
+  <div class="guide__section-group">
+    <h3 class="title">Chips</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vehicula quis dui eget euismod. Etiam in libero sit amet libero vulputate placerat. Curabitur in posuere augue, at porta dolor.</p>
+  </div>
+  <div class="guide__section-group">
+    <ul>
+      <li class="margin-bottom--charlie row">
+        <div class="chip__container">
+          <div class="chip__avatar">
+            <h5 class="chip__avatar-text">BS</h5>
+          </div>
+        </div>
+      </li>
+      <li class="margin-bottom--charlie row">
+        <div class="chip__container">
+          <div class="chip__avatar">
+            <h5 class="chip__avatar-text">BS</h5>
+          </div>
+          <div class="chip__text-container">
+            <p class="chip__text-title">BakeSmart Software</p>
+          </div>
+        </div>
+      </li>
+      <li class="margin-bottom--charlie row">
+        <div class="chip__container">
+          <div class="chip__avatar">
+            <h5 class="chip__avatar-text">BS</h5>
+          </div>
+          <div class="chip__text-container">
+            <p class="chip__text-title">BakeSmart Software</p>
+            <p class="chip__text-description">Email: help@bakesmart.com</p>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="guide__section-group">
+    <h6 class="label">Sample Code</h6>
+<% code("html") do %>
+  <!-- Chip Base -->
+  <div class="chip__container">
+    <div class="chip__avatar">
+      <h5 class="chip__avatar-text">BS</h5>
+    </div>
+  </div>
+
+  <!-- Chip With Title -->
+  <div class="chip__container">
+    <div class="chip__avatar">
+      <h5 class="chip__avatar-text">BS</h5>
+    </div>
+    <div class="chip__text-container">
+      <p class="chip__text-title">BakeSmart Software</p>
+    </div>
+  </div>
+
+  <!-- Chip With Title And Description -->
+  <div class="chip__container">
+    <div class="chip__avatar">
+      <h5 class="chip__avatar-text">BS</h5>
+    </div>
+    <div class="chip__text-container">
+      <p class="chip__text-title">BakeSmart Software</p>
+      <p class="chip__text-description">Email: help@bakesmart.com</p>
+    </div>
+  </div>
+
+<% end %><br/>
+  </div>
+  <div class="guide__section-group">
+    <h6 class="label">HTML Guidelines</h6>
+    <p>This table gives you a quick overview of the CSS classes that can be applied to create a button.</p>
+    <table class="table-guide">
+      <thead class="table-guide__head">
+        <th class="table-guide__head-item">Class Name</th>
+        <th class="table-guide__head-item">Usage</th>
+      </thead>
+      <tbody class="table-guide__body">
+        <tr>
+          <td class="table-guide__body-item" style="width:30%">.chip__container</td>
+          <td class="table-guide__body-item">This should be applied to the element that contains the chip content. <% code("html") do %><div class="chip__container"> <!-- Chip Content --> </div><% end %></td>
+        </tr>
+        <tr>
+          <td class="table-guide__body-item" style="width:30%">.chip__avatar</td>
+          <td class="table-guide__body-item">This is the container class for the avatar.</td>
+        </tr>
+        <tr>
+          <td class="table-guide__body-item" style="width:30%">.card__avatar-text</td>
+          <td class="table-guide__body-item">If a chip does not have a picture, you can use this class to add text that is centered horizontally and vertically in the chip avatar.</td>
+        </tr>
+        <tr>
+          <td class="table-guide__body-item" style="width:30%">.chip__text-container</td>
+          <td class="table-guide__body-item">This class should be applied to the container that wraps the text of a chip element.</td>
+        </tr>
+        <tr>
+          <td class="table-guide__body-item" style="width:30%">.chip__text-title</td>
+          <td class="table-guide__body-item">This class should be applied to title of a chip.</td>
+        </tr>
+        <tr>
+          <td class="table-guide__body-item" style="width:30%">.chip__text-description</td>
+          <td class="table-guide__body-item">This class should be applied to description of a chip.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</article>

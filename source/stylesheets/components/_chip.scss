@@ -1,0 +1,64 @@
+// Chip Component Stylesheet
+// ========================================
+
+// Variables
+$chip-container-margin:           0 0 $spacer-delta 0;
+$chip-container-position:         relative;
+
+$chip-avatar-bg:                  $blue-base;
+$chip-avatar-border-radius:       30em;
+$chip-avatar-display:             inline-block;
+$chip-avatar-float:               left;
+$chip-avatar-margin:              0 $spacer-delta 0 0;
+$chip-avatar-overflow:            hidden;
+$chip-avatar-position:            relative;
+$chip-avatar-size:                40px;
+
+$chip-avatar-text-color:          $white-base;
+
+$chip-text-container-position:    relative;
+$chip-text-container-display:     inline-block;
+
+// Structure
+.chip {
+
+  // Chip Container
+  &__container {
+    @include clearfix;
+    @include position($chip-container-position);
+    margin: $chip-container-margin;
+  }
+
+  // Chip Avatar
+  &__avatar {
+    @include position($chip-avatar-position);
+    @include size($chip-avatar-size $chip-avatar-size);
+    background-color: $chip-avatar-bg;
+    border-radius: $chip-avatar-border-radius;
+    display: $chip-avatar-display;
+    float: $chip-avatar-float;
+    margin: $chip-avatar-margin;
+    overflow: $chip-avatar-overflow;
+  }
+
+  &__avatar-text {
+    @include center($horizontal: true, $vertical: true);
+    color: $chip-avatar-text-color;
+  }
+
+  // Chip Text
+  &__text-container {
+    @include center($horizontal: false, $vertical: true);
+    left: $chip-avatar-size + $spacer-delta;
+  }
+
+  &__text-title {
+    @extend .text--bold;
+    margin: 0;
+  }
+
+  &__text-description {
+    @include s-golf;
+    margin: 0;
+  }
+}
