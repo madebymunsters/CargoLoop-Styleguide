@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title><%= current_page.data.title || "BakeSmart - Styleguide" %></title>
+
+    <!-- Favicon -->
+    <%= favicon_tag 'images/favicon.png' %>
+
+    <!-- Stylesheets -->
+    <%= stylesheet_link_tag "main", "syntax" %>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700,700i" rel="stylesheet">
+  </head>
+  <body>
+    <%= partial 'layouts/shared/topbar' %>
+    <main role="main" class="page">
+      <%= yield %>
+    </main>
+    <!-- Scripts -->
+    <%= javascript_include_tag "site" %>
+  </body>
+</html>

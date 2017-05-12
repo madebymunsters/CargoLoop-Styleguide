@@ -1,0 +1,19 @@
+topbar_navigation:
+  - title: Elements
+    url: '#elements'
+  - title: Components
+    url: '#components'
+  - title: Layout
+    url: '#layout'
+  - title: Resources
+    url: '#resources'
+
+elements_navigation:
+  - title: Colors
+    url: '#colors'
+
+components_navigation:
+  - title: Alerts
+    url: '#alerts'
+  - title: Buttons
+    url: '#buttons'

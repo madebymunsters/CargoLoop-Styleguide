@@ -1,0 +1,74 @@
+colors:
+  primary:
+    - title: Orange Base
+      variable_value: $orange-base
+      hex_value: '#FF6600'
+      rgba_value: 255, 102, 0, 1
+      color: 'orange-base'
+    - title: Blue Base
+      variable_value: $blue-base
+      hex_value: '#42A5F5'
+      rgba_value: 66, 165, 245, 1
+      color: 'blue-base'
+  secondary:
+    - title: Black Base
+      variable_value: $black-base
+      hex_value: '#344750'
+      rgba_value: 52, 71, 80, 1
+      color: 'black-base'
+    - title: Yellow Base
+      variable_value: $yellow-base
+      hex_value: '#FFAA00'
+      rgba_value: 255, 170, 0, 1
+      color: 'yellow-base'
+    - title: Green Base
+      variable_value: $green-base
+      hex_value: '#00CF63'
+      rgba_value: 0, 207, 99, 1
+      color: 'green-base'
+    - title: Red Base
+      variable_value: $red-base
+      hex_value: '#FC472E'
+      rgba_value: 252, 71, 46, 1
+      color: 'red-base'
+    - title: Pink Base
+      variable_value: $pink-base
+      hex_value: '#F23154'
+      rgba_value: 242, 49, 84, 1
+      color: 'pink-base'
+    - title: Purple Base
+      variable_value: $purple-base
+      hex_value: '#5D62CF'
+      rgba_value: 93, 98, 207, 1
+      color: 'purple-base'
+  accent:
+    - title: White Base
+      variable_value: $white-base
+      hex_value: '#FFFFFF'
+      rgba_value: 255, 255, 255, 1
+      color: 'white-base'
+    - title: Grey Light
+      variable_value: $grey-light
+      hex_value: '#F3F5F7'
+      rgba_value: 243, 245, 247, 1
+      color: 'grey-light'
+    - title: Grey Base
+      variable_value: $grey-base
+      hex_value: '#ECEFF1'
+      rgba_value: 236, 239, 241, 1
+      color: 'grey-base'
+    - title: Grey Dark
+      variable_value: $grey-dark
+      hex_value: '#72919E'
+      rgba_value: 114, 145, 158, 1
+      color: 'grey-dark'
+    - title: Grey Alt
+      variable_value: $grey-alt
+      hex_value: '#ADBEC5'
+      rgba_value: 173, 190, 197, 1
+      color: 'grey-alt'
+    - title: Grey Alt 2
+      variable_value: $grey-alt-2
+      hex_value: '#CDD8DD'
+      rgba_value: 205, 216, 221, 1
+      color: 'grey-alt-2'

@@ -1,0 +1,47 @@
+<article  role="article" id="colors">
+  <div class="guide__section-group">
+    <h3 class="title">Alerts</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vehicula quis dui eget euismod. Etiam in libero sit amet libero vulputate placerat. Curabitur in posuere augue, at porta dolor.</p>
+  </div>
+  <div class="guide__section-group">
+    <% data.components_alerts.alerts.each do |i| %>
+      <figure class="alert--<%= i.type %>">
+        <%= inline_svg('images/icons/icons-functional/icon-bell.svg', class: 'alert__icon') %>
+        <p class="alert__text"><%= i.text %></p>
+        <% link_to '#' do %>
+          <%= inline_svg('images/icons/icons-functional/icon-close.svg', class: 'alert__trigger') %>
+        <% end %>
+      </figure>
+    <% end %>
+  </div>
+  <div class="guide__section-group">
+    <h6 class="label">Sample Code</h6>
+<% code("html") do %>
+
+<% end %><br/>
+  </div>
+  <div class="guide__section-group">
+    <h6 class="label">HTML Guidelines</h6>
+    <p>This table gives you a quick overview of the CSS classes that can be applied to create alerts.</p>
+    <table class="table">
+      <thead class="table__header">
+        <th class="table__header-item">Class Name</th>
+        <th class="table__header-item">Usage</th>
+      </thead>
+      <tbody class="table__body">
+        <tr>
+          <td class="table__body-item" style="width:30%">.alert--[type]</td>
+          <td class="table__body-item">This should be applied to the element you are styling to look like an alert. It provides the correct styles for the message being returned. The class name should change based on the type of alert being displayed. <% code("html") do %><figure class"alert--success"></figure><% end %></td>
+        </tr>
+        <tr>
+          <td class="table__body-item" style="width:30%">[aria-hidden="true"]</td>
+          <td class="table__body-item">Set this on the alert when it is hidden from the view.</td>
+        </tr>
+        <tr>
+          <td class="table__body-item" style="width:30%">[aria-hidden="false"]</td>
+          <td class="table__body-item">Set this on the alert when it is visible in the view.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</article>

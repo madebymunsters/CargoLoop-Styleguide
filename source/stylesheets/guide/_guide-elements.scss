@@ -1,0 +1,40 @@
+// Elements Guide Stylesheet
+// ========================================
+
+// Variables
+$ele-color-icon-display:  block;
+$ele-color-icon-height:   200px;
+$ele-color-icon-margin:   0 0 $spacer-delta;
+
+// Structure
+.element-color {
+  @include span-columns(4 of 4);
+
+  @include media($medium) {
+    @include span-columns(3 of 9);
+    @include omega(3n);
+  }
+
+  @include media($large) {
+    @include omega-reset(3n);
+    @include span-columns(4 of 12);
+    @include omega(3n);
+  }
+}
+
+.element-color-icon {
+  @include size(100% $ele-color-icon-height);
+  display: $ele-color-icon-display;
+  margin: $ele-color-icon-margin;
+}
+
+.element-color-list {
+
+  .element-color-item {
+    @include s-golf;
+  }
+
+  .element-color-txt-right {
+    float: right;
+  }
+}

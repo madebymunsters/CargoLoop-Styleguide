@@ -1,0 +1,33 @@
+<header role="banner" class="application-topbar">
+  <nav role="navigation" class="container">
+    <div class="row">
+      <div class="columns-4__s columns-9__m columns-12__l">
+        <div class="application-topbar__left">
+          <% link_to '/', class: 'application-topbar__link' do %>
+            <%= image_tag 'images/logos/logo-color.png', alt: 'BakeSmart Logo', class: 'logo' %>
+          <% end %>
+        </div>
+        <div class="application-topbar__right">
+          <ul class="application-topbar__list">
+            <% data.page_navigation.topbar_navigation.each do |i| %>
+              <li class="application-topbar__item">
+                <%= link_to i.title, i.url, class: 'application-topbar__link' %>
+              </li>
+            <% end %>
+          </ul>
+          <% link_to '#', class: 'application-topbar__link' do %>
+            <%= inline_svg('images/icons/icons-functional/icon-menu.svg', alt: 'Menu icon', class: 'application-topbar__mobile-trigger') %>
+          <% end %>
+        </div>
+        <!-- NOTE: DRY this up at some point in time -->
+        <ul class="application-topbar__mobile-menu">
+          <% data.page_navigation.topbar_navigation.each do |i| %>
+            <li class="application-topbar__item">
+              <%= link_to i.title, i.url, class: 'application-topbar__link' %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

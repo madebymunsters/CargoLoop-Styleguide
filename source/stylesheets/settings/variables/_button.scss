@@ -1,0 +1,53 @@
+// Buttons Variables
+// ========================================
+
+// Buttons Standard
+$buttons: (
+  'primary': (
+    background-color: $orange-base,
+    border-color: darken($orange-base, 10%),
+    color: $white-base
+  ),
+  'secondary': (
+    background-color: $blue-base,
+    border-color: darken($blue-base, 10%),
+    color: $white-base
+  ),
+  'warning': (
+    background-color: $yellow-base,
+    border-color: darken($yellow-base, 10%),
+    color: $white-base
+  ),
+  'danger': (
+    background-color: $red-base,
+    border-color: darken($red-base, 10%),
+    color: $white-base
+  ),
+  'disabled': (
+    background-color: $grey-base,
+    border-color: $grey-base,
+    color: $grey-alt-2
+  )
+);
+
+// Button Sizes
+$button-sizes: (
+  'tiny': (
+    display: null,
+    font-size: $s-hotel,
+    padding: 6px $spacer-delta,
+    width: null
+  ),
+  'small': (
+    display: null,
+    font-size: $s-golf,
+    padding: 8px $spacer-delta,
+    width: null
+  ),
+  'full': (
+    display: null,
+    font-size: null,
+    padding: null,
+    width: 100%
+  )
+);

@@ -1,0 +1,56 @@
+// Colors Variables Settings Stylesheet
+// ========================================
+
+// Black
+$black-base:   #344750;
+
+// Blue
+$blue-base:    #42A5F5;
+
+// Green
+$green-base:   #00CF63;
+
+// Grey
+$grey-light:   #F3F5F7;
+$grey-base:    #ECEFF1;
+$grey-dark:    #72919E;
+
+$grey-alt:     #ADBEC5;
+$grey-alt-2:   #CDD8DD;
+
+// Orange
+$orange-base:  #FF6600;
+
+// Pink
+$pink-base:    #F23154;
+
+// Purple
+$purple-base:  #5D62CF;
+
+// Yellow
+$yellow-base:  #FFAA00;
+
+// Red
+$red-base:     #FC472E;
+
+// White
+$white-base:   #FFFFFF;
+
+
+// Main Palette List
+$colors: (
+  black-base:    $black-base,
+  blue-base:     $blue-base,
+  green-base:    $green-base,
+  grey-light:    $grey-light,
+  grey-base:     $grey-base,
+  grey-dark:     $grey-dark,
+  grey-alt:      $grey-alt,
+  grey-alt-2:    $grey-alt-2,
+  orange-base:   $orange-base,
+  pink-base:     $pink-base,
+  purple-base:   $purple-base,
+  yellow-base:   $yellow-base,
+  red-base:      $red-base,
+  white-base:    $white-base
+);

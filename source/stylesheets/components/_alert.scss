@@ -1,0 +1,69 @@
+// Alert Component Stylesheet
+// ========================================
+
+// Variables
+$alert-animate-top:               0;
+
+$alert-text-color:                $white-base;
+$alert-text-display:              inline-block;
+$alert-text-margin:               0;
+$alert-text-width:                80%;
+
+$alert-icon-display:              inline-block;
+$alert-icon-margin:               2px $spacer-echo 0 0;
+$alert-icon-v-align:              top;
+
+$alert-trigger-cusor:             pointer;
+$alert-trigger-position:          absolute;
+$alert-trigger-right:             15px;
+
+
+// Structure
+@each $alert, $styles in $alerts  {
+  $color-1:  map-get($styles, background);
+  $color-2:  map-get($styles, color);
+
+  .alert--#{$alert} {
+    @include alert($color-1, $color-2);
+
+    // App Icons
+    #app-icon{
+      fill: $color-2;
+    }
+
+    // Alert Text
+    .alert__text {
+      @include s-foxtrot;
+      color: $color-2;
+      display: $alert-text-display;
+      margin: $alert-text-margin;
+      width: $alert-text-width;
+    }
+  }
+}
+
+
+// Alert Animation
+@keyframes animate-alert {
+
+  100% {
+    top: $alert-animate-top;
+  }
+}
+
+// Alert Icon
+.alert__icon {
+  display: $alert-icon-display;
+  margin: $alert-icon-margin;
+  vertical-align: $alert-icon-v-align;
+}
+
+// Alert Trigger
+.alert__trigger {
+  @include center($horizontal: false, $vertical: true);
+  right: $alert-trigger-right;
+
+  &:hover {
+    cursor: $alert-trigger-cusor;
+  }
+}

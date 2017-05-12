@@ -1,0 +1,9 @@
+alerts:
+  - text: General system alert.
+    type: notification
+  - text: You have successfully completed an action.
+    type: success
+  - text: Oh no, something happened, not bad. But not good.
+    type: caution
+  - text: Oh snap! Something went wrong.
+    type: warning

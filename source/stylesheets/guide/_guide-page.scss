@@ -1,0 +1,58 @@
+// Page Guide Stylesheet
+// ========================================
+
+// Variables
+$guide-section-margin-top:            $spacer-alpha;
+
+$guide-section-header-margin:         $spacer-charlie;
+
+
+// Structure
+.guide__section {
+  @extend .container;
+  margin-top: $guide-section-margin-top;
+}
+
+.guide__section-header {
+  @include span-columns(4 of 4);
+  margin-bottom: $guide-section-header-margin;
+
+  @include media($medium) {
+    @include span-columns(6 of 9);
+  }
+
+  @include media($large) {
+    @include span-columns(8 of 12);
+  }
+}
+
+.guide__section-content {
+  @include span-columns(4 of 4);
+
+  @include media($medium) {
+    @include span-columns(7 of 9);
+  }
+
+  @include media($large) {
+    @include span-columns(8 of 12);
+  }
+
+  .guide__section-group {
+    @include row;
+    margin-bottom: $spacer-charlie;
+  }
+}
+
+.guide__section-aside {
+  display: none;
+
+  @include media($medium) {
+    @include span-columns(2 of 9);
+    display: block;
+  }
+
+  @include media($large) {
+    @include span-columns(3 of 12);
+    @include shift(1 of 12);
+  }
+}
