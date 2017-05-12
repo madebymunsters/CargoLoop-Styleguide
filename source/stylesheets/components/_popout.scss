@@ -3,12 +3,6 @@
 
 // Variables
 $popout-cords:                30px null null 0;
-$popout-margin:               0;
-$popout-padding:              $spacer-delta;
-$popout-position:             absolute;
-$popout-text-align:           left;
-$popout-width:                auto;
-$popout-z-index:              1;
 
 $popout-inverse-cords:        null 0 20px null;
 
@@ -24,22 +18,11 @@ $popout-pause-color:          $blue-base;
 
 // Structure
 .popout {
-  @include card($shadow: true);
-  @include position($popout-position, $popout-cords);
-  display: none;
-  margin: $popout-margin;
-  padding: $spacer-delta;
-  text-align: $popout-text-align;
-  width: $popout-width;
-  z-index: $popout-z-index;
-
-  &.is-active {
-    display: block;
-  }
+  @include popout($popout-cords);
 
   // Popout Inverse
   &--inverse {
-    @include position($popout-position, $popout-inverse-cords);
+    @include popout($popout-inverse-cords);
     top: inherit;
   }
 

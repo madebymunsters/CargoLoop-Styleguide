@@ -1,0 +1,37 @@
+// Popout Mixin Settings Stylesheet
+// ========================================
+
+// Mixin
+@mixin popout($popout-cords) {
+
+  //Variables
+  $popout-margin:               0;
+  $popout-opacity:              0;
+  $popout-padding:              $spacer-delta;
+  $popout-position:             absolute;
+  $popout-text-align:           left;
+  $popout-transition:           opacity 0.5s ease;
+  $popout-visibility:           hidden;
+  $popout-width:                auto;
+  $popout-z-index:              1;
+
+  $popout-active-opacity:       1;
+  $popout-active-visibility:    visible;
+
+  // Structure
+  @include card($shadow: true);
+  @include position($popout-position, $popout-cords);
+  margin: $popout-margin;
+  opacity: $popout-opacity;
+  padding: $popout-padding;
+  text-align: $popout-text-align;
+  transition: $popout-transition;
+  visibility: $popout-visibility;
+  width: $popout-width;
+  z-index: $popout-z-index;
+
+  &.is-active {
+    opacity: $popout-active-opacity;
+    visibility: $popout-active-visibility;
+  }
+}

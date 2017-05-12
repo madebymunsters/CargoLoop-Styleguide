@@ -38,13 +38,16 @@ $tab-list-link-color-dark:           $white-base;
   display: block;
 }
 
-// Tab Nav List
-.tab__list {
-  border-bottom: $tab-list-border;
-  padding: $tab-list-padding;
+.tab {
 
-  // Tab Item
-  .tab__item {
+  // Tab Nav List
+  &__list {
+    border-bottom: $tab-list-border;
+    padding: $tab-list-padding;
+  }
+
+  // Tab Nav Item
+  &__item {
     @include font-type($primary-sans-serif, normal, 400);
     @include position($tab-list-item-position);
     @include s-golf;
@@ -78,15 +81,15 @@ $tab-list-link-color-dark:           $white-base;
       }
     }
   }
-}
 
-// Tab Pane
-.tab__content {
-  display: none;
-  margin-top: $tab-content-margin;
+  // Tab Pane
+  &__content {
+    display: none;
+    margin-top: $tab-content-margin;
 
-  &.is-active {
-    animation: $tab-content-animation-in;
-    display: block;
+    &.is-active {
+      animation: $tab-content-animation-in;
+      display: block;
+    }
   }
 }
