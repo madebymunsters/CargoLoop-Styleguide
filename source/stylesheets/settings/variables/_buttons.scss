@@ -18,6 +18,11 @@ $buttons: (
     border-color: darken($red-base, 20%),
     color: $white-base
   ),
+  'default': (
+    background-color: $grey-base,
+    border-color: $grey-alt-2,
+    color: $grey-alt
+  ),
   'disabled': (
     background-color: $grey-base,
     border-color: $grey-base,

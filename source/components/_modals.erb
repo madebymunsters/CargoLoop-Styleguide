@@ -1,0 +1,108 @@
+<article role="article" id="modals" class="guide__section-group-container">
+  <div class="guide__section-group">
+    <h3 class="title">Modals</h3>
+    <p class="text">Modals are used as a way for the user to interact with the view without leaving it. Modals should be single actions. Never use a modal as a step action or multi-part form.</p>
+  </div>
+  <div class="guide__section-group">
+    <button class="button--primary modal__trigger">Click for Modal</button>
+    <div class="modal" aria-hidden="true">
+      <div class="modal__overlay">
+        <div class="modal__container">
+          <div class="modal__body">
+            <header class="modal__header">
+              <h3 class="title">Modal Title</h3>
+              <p class="modal-intro">Intro text lorem ipsum dolor sit ametm, quas, eaque facilis aliquid cupiditate tempora cumque ipsum accusantium illo modi commodi  minima.</p>
+            </header>
+            <div>
+              <p class="modal-content">Modal Content goes here.</p>
+              <div class="modal__actions">
+                <ul class="modal__actions-list">
+                  <li class="modal__actions-item">
+                    <button class="button--default button--full modal__close">Cancel</button>
+                  </li>
+                  <li class="modal__actions-item">
+                    <button class="button--danger button--full">Delete</button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="guide__section-group">
+    <h4 class="content-section__label">Sample Code</h4>
+<% code("html") do %>
+  <button class="button--primary modal__trigger">Click for Modal</button>
+  <div class="modal" aria-hidden="true">
+    <div class="modal__overlay">
+      <div class="modal__container">
+        <div class="modal__body">
+          <a href="#" role="button" class="modal__close">
+            <%= inline_svg("icons/close-icon.svg", class: "modal__close-icon") %>
+          </a>
+          <header class="modal__header">
+            <h3 class="title">Modal Title</h3>
+            <p class="modal-intro">Intro text lorem ipsum dolor sit ametm, quas, eaque facilis aliquid cupiditate tempora cumque ipsum accusantium illo modi commodi  minima.</p>
+          </header>
+          <div>
+            <p class="modal-content">Modal Content goes here.</p>
+            <div class="modal__actions">
+              <ul class="modal__actions-list">
+                <li class="modal__actions-item">
+                  <a href="#" class="link--delta">Close</a>
+                </li>
+                <li class="modal__actions-item">
+                  <button class="button--charlie">Button Text</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %><br/>
+  </div>
+  <div class="guide__section-group">
+    <h4 class="content-section__label">HTML Guidelines</h4>
+    <p>This table gives you a quick overview of the CSS classes that can be applied to create a modal.</p>
+    <table class="table-guide">
+      <thead class="table-guide__head">
+        <th class="table-guide__head-item">Class Name</th>
+        <th class="table-guide__head-item">Usage</th>
+      </thead>
+      <tbody class="table-guide__body">
+        <tr>
+          <td class="table-guide__body-item" style="width:30%">.modal__trigger</td>
+          <td class="table-guide__body-item">Add this class the element that opens or launches the modal. <% code("html") do %><button class="button--bravo modal__trigger"></button><% end %></td>
+        </tr>
+        <tr>
+          <td class="table-guide__body-item" style="width:30%">.modal</td>
+          <td class="table-guide__body-item">Add to element that contains the modal. <% code("html") do %><div class="modal"></div><% end %></td>
+        </tr>
+        <tr>
+          <td class="table-guide__body-item" style="width:30%">.modal__overlay</td>
+          <td class="table-guide__body-item">This class should be added to the first child element of the modal. It should also wrap the modal content. <% code("html") do %><div class="modal__overlay"></div><% end %></td>
+        </tr>
+        <tr>
+          <td class="table-guide__body-item" style="width:30%">.modal__body</td>
+          <td class="table-guide__body-item">Add to the element that contains the content of the modal. <% code("html") do %><div class="modal__body"></div><% end %></td>
+        </tr>
+        <tr>
+          <td class="table-guide__body-item" style="width:30%">.modal__body-header</td>
+          <td class="table-guide__body-item">This class should be added to the header element. The header element should contain a description of what the modal is going to be used for. <% code("html") do %><header class="modal__header"></header><% end %></td>
+        </tr>
+        <tr>
+          <td class="table-guide__body-item" style="width:30%">.modal__body-footer</td>
+          <td class="table-guide__body-item">This class can be applied to the element that contains the modal actions. <% code("html") do %><footer class="modal__body-footer"> <!-- Content --> </footer><% end %></td>
+        </tr>
+        <tr>
+          <td class="table-guide__body-item" style="width:30%">.modal__body-footer-action</td>
+          <td class="table-guide__body-item">This class can be applied to the element that is actionable. <% code("html") do %><a class="modal__body-footer-action">Cancel</a><% end %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</article>

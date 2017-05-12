@@ -1,0 +1,132 @@
+// // Modal Component Stylesheet
+// // ========================================
+
+// Variables
+$modal-background-fixed:        fixed;
+$modal-background-fixed-width:  100%;
+
+$modal-height:                  100%;
+$modal-margin:                  $spacer-charlie;
+$modal-overflow:                scroll;
+$modal-padding:                 $spacer-charlie;
+$modal-position:                relative;
+$modal-width:                   100%;
+
+$modal-overlay-background:      rgba(20, 28, 32, 0.8);
+$modal-overlay-dimensions:      100%;
+$modal-overlay-opacity-0:       0;
+$modal-overlay-opacity-1:       1;
+$modal-overlay-postion:         fixed;
+$modal-overlay-top-position:    0;
+$modal-overlay-left-position:   0;
+$modal-overlay-transition:      opacity 0.5s ease-in-out;
+$modal-overlay-visibility-0:    hidden;
+$modal-overlay-visibility-1:    visible;
+$modal-overlay-z-index:         100003;
+
+$modal-body-background:         $white-base;
+$modal-body-border:             none;
+$modal-body-box-shadow:         0 0 20px rgba(29, 40, 46, 1);
+$modal-border-radius:           3px;
+$modal-body-height-md:          auto;
+$modal-body-position:           absolute;
+$modal-body-bottom-position:    0;
+$modal-body-left-position:      0;
+$modal-body-right-position:     0;
+$modal-body-top-position:       -20%;
+$modal-body-transition:         all 0.65s ease-in-out;
+$modal-body-width-sm:           90%;
+$modal-body-width-md:           550px;
+$modal-body-z-index:            99997;
+
+$modal-header-background:       $white-base;
+$modal-header-border:           $modal-body-border;
+
+$modal-title-padding:           $spacer-charlie 0;
+
+$modal-trigger-icon-position:   38px 30px null null;
+$modal-trigger-icon-transition: opacity 0.35s ease-in-out;
+$modal-trigger-icon-width:      12px;
+
+
+// Structure
+.modal {
+  @include position($modal-position);
+  overflow: $modal-overflow;
+  width: $modal-width;
+
+  // Active Modal
+  &--active {
+
+    .modal__body {
+      opacity: $modal-overlay-opacity-1;
+      top: 2%;
+      visibility: $modal-overlay-visibility-1;
+
+      @include media($medium) {
+        top: 5%;
+      }
+    }
+
+    .modal__overlay {
+      opacity: $modal-overlay-opacity-1;
+      transition: $modal-overlay-transition;
+      visibility: $modal-overlay-visibility-1;
+    }
+  }
+}
+
+// Modal Overlay
+.modal__overlay {
+  @include position($modal-overlay-postion, $modal-overlay-top-position null null $modal-overlay-left-position);
+  background-color: $modal-overlay-background;
+  height: $modal-overlay-dimensions;
+  overflow: scroll;
+  opacity: $modal-overlay-opacity-0;
+  transition: $modal-overlay-transition;
+  visibility: $modal-overlay-visibility-0;
+  width: $modal-overlay-dimensions;
+  z-index: $modal-overlay-z-index;
+}
+
+// Modal Body Header
+.modal__body-header {
+  border-bottom: $modal-header-border;
+  padding: 0 $modal-padding;
+
+  .title {
+    @include font-type($primary-sans-serif, normal, 400);
+    @include s-charlie;
+    color: $grey-alt;
+    margin: 0;
+    padding: $modal-title-padding;
+  }
+}
+
+
+// Modal Body
+.modal__body {
+  @include card($shadow: false);
+  @include position($modal-body-position, $modal-body-top-position $modal-body-right-position null $modal-body-left-position);
+  box-shadow: $modal-body-box-shadow;
+  height: $modal-body-height-md;
+  margin: $spacer-bravo auto;
+  opacity: $modal-overlay-opacity-0;
+  transition: $modal-body-transition;
+  width: $modal-body-width-sm;
+  visibility: $modal-overlay-visibility-0;
+  z-index: $modal-body-z-index;
+
+  @include media($medium) {
+    width: $modal-body-width-md;
+  }
+}
+
+// Modal Actions
+.modal__actions {
+  margin: $spacer-bravo 0 0;
+
+  &-item {
+    @include span-columns(2 of 4);
+  }
+}
