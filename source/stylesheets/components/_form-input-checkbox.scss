@@ -26,7 +26,6 @@ $checkbox-border-disabled:              $grey-dark;
 input[type="checkbox"],
 input[type="checkbox"]:focus {
   @include position($checkbox-position);
-  @include transition();
   appearance: none;
   -webkit-appearance: none;
   background-color: $checkbox-background;
@@ -37,6 +36,7 @@ input[type="checkbox"]:focus {
   margin: $checkbox-margin;
   outline: none;
   padding: $checkbox-padding;
+  transition: $checkbox-transition;
   vertical-align: $checkbox-v-align;
   width: $checkbox-dimensions;
 

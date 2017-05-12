@@ -28,7 +28,6 @@ $radio-border-disabled:              $grey-dark;
 input[type="radio"],
 input[type="radio"]:focus {
   @include position($radio-position);
-  @include transition();
   appearance: none;
   -webkit-appearance: none;
   background-color: $radio-background;
@@ -39,6 +38,7 @@ input[type="radio"]:focus {
   margin: $radio-margin;
   outline: none;
   padding: $radio-padding;
+  transition: $radio-transition;
   vertical-align: $radio-v-align;
   width: $radio-dimensions;
 

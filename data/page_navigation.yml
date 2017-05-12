@@ -25,6 +25,8 @@ components_navigation:
     url: '#form-elements'
   - title: Links
     url: '#links'
+  - title: Popouts
+    url: '#popouts'
   - title: Tabs
     url: '#tabs'
   - title: Tooltips

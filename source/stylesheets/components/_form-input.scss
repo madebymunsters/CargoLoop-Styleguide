@@ -44,7 +44,7 @@ select {
   transition: $form-input-transition;
   width: 100%;
 
-  @include placeholder {
+  &::placeholder {
     color: $form-input-color-placeholder;
     font-style: italic;
   }
@@ -76,7 +76,7 @@ select {
     color: $grey-dark;
     cursor: not-allowed;
 
-    @include placeholder {
+    &::placeholder {
       color: $grey-alt-2;
       font-style: italic;
     }

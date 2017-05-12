@@ -57,11 +57,11 @@ $tab-list-link-color-dark:           $white-base;
 
     &::before {
       @include position($tab-list-link-position, $tab-list-link-cords);
-      @include transition($tab-list-link-transition);
       background-color: $tab-list-link-bg;
       content: " ";
       display: block;
       height: $tab-list-link-height;
+      transition: $tab-list-link-transition;
       width: $tab-list-link-width;
     }
 
@@ -86,7 +86,7 @@ $tab-list-link-color-dark:           $white-base;
   margin-top: $tab-content-margin;
 
   &.is-active {
-    @include animation($tab-content-animation-in);
+    animation: $tab-content-animation-in;
     display: block;
   }
 }

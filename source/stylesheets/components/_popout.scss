@@ -1,0 +1,72 @@
+// Popout Component
+// ========================================
+
+// Variables
+$popout-cords:                30px null null 0;
+$popout-margin:               0;
+$popout-padding:              $spacer-delta;
+$popout-position:             absolute;
+$popout-text-align:           left;
+$popout-width:                auto;
+$popout-z-index:              1;
+
+$popout-inverse-cords:        null 0 20px null;
+
+$popout-container-display:    inline-block;
+$popout-container-position:   relative;
+$popout-container-width:      100%;
+
+$popout-delete-border:        $border-bravo;
+$popout-delete-color:         $red-base;
+$popout-pause-border:         $border-bravo;
+$popout-pause-color:          $blue-base;
+
+
+// Structure
+.popout {
+  @include card($shadow: true);
+  @include position($popout-position, $popout-cords);
+  display: none;
+  margin: $popout-margin;
+  padding: $spacer-delta;
+  text-align: $popout-text-align;
+  width: $popout-width;
+  z-index: $popout-z-index;
+
+  &.is-active {
+    display: block;
+  }
+
+  // Popout Inverse
+  &--inverse {
+    @include position($popout-position, $popout-inverse-cords);
+    top: inherit;
+  }
+
+  // Popout Container
+  &__container {
+    @include position($popout-container-position);
+    display: $popout-container-display;
+    width: $popout-container-width;
+  }
+
+  // Popout List
+  &__list {
+    white-space: nowrap;
+  }
+
+  &__item {
+    display: block;
+    font-weight: 400;
+    margin: 0;
+    padding: $spacer-echo 0;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+}
