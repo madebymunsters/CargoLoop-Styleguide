@@ -4,7 +4,7 @@
 // Variables
 $checkbox-background:                   $white-base;
 $checkbox-border:                       2px solid $grey-base;
-$checkbox-border-radius:                1px;
+$checkbox-border-radius:                3px;
 $checkbox-cursor:                       pointer;
 $checkbox-dimensions:                   17px;
 $checkbox-display:                      inline-block;
@@ -17,32 +17,43 @@ $checkbox-v-align:                      bottom;
 $checkbox-checked-background:           $blue-base;
 $checkbox-checked-border:               2px solid $blue-base;
 
-$checkbox-background-disabled:          $grey-base;
-$checkbox-background-disabled-checked:  $grey-base;
-$checkbox-border-disabled:              $grey-dark;
+$checkbox-background-disabled:          $grey-alt-2;
+$checkbox-border-disabled:              $grey-alt;
+$checkbox-cursor-disabled:              not-allowed;
+
+$checkbox-label-cursor:                 pointer;
 
 
 // Structure
 input[type="checkbox"],
 input[type="checkbox"]:focus {
   @include position($checkbox-position);
+  @include size($checkbox-dimensions $checkbox-dimensions);
   appearance: none;
   -webkit-appearance: none;
   background-color: $checkbox-background;
   border: $checkbox-border;
   border-radius: $checkbox-border-radius;
   display: $checkbox-display;
-  height: $checkbox-dimensions;
   margin: $checkbox-margin;
   outline: none;
   padding: $checkbox-padding;
   transition: $checkbox-transition;
   vertical-align: $checkbox-v-align;
-  width: $checkbox-dimensions;
 
   &:hover{
     border: $checkbox-checked-border;
     cursor: $checkbox-cursor;
+  }
+
+  &:disabled,
+  &.disabled {
+    background-color: $checkbox-background-disabled;
+    border-color: $checkbox-border-disabled;
+
+    &:hover {
+      cursor: $checkbox-cursor-disabled;
+    }
   }
 }
 
@@ -64,6 +75,7 @@ input[type="checkbox"]:checked {
 
 .checkbox--label {
   @include position(relative);
+  cursor: $checkbox-label-cursor;
 
   &.checkbox--label__small {
     @include position(relative);

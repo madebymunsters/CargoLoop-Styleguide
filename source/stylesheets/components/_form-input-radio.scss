@@ -17,48 +17,57 @@ $radio-v-align:                      bottom;
 $radio-checked-background:           $blue-base;
 $radio-checked-border:               2px solid $blue-base;
 $radio-checked-margin:               0 auto;
-$radio-checked-size:                 70%;
+$radio-checked-size:                 9px;
 
-$radio-background-disabled:          $grey-base;
-$radio-background-disabled-checked:  $grey-base;
-$radio-border-disabled:              $grey-dark;
+$radio-background-disabled:          $grey-alt-2;
+$radio-border-disabled:              $grey-alt;
+$radio-cursor-disabled:              not-allowed;
 
 
 // Structure
 input[type="radio"],
 input[type="radio"]:focus {
   @include position($radio-position);
+  @include size($radio-dimensions $radio-dimensions);
   appearance: none;
   -webkit-appearance: none;
   background-color: $radio-background;
   border: $radio-border;
   border-radius: $radio-border-radius;
   display: $radio-display;
-  height: $radio-dimensions;
   margin: $radio-margin;
   outline: none;
   padding: $radio-padding;
   transition: $radio-transition;
   vertical-align: $radio-v-align;
-  width: $radio-dimensions;
 
   &:hover{
     border: $radio-checked-border;
     cursor: $radio-cursor;
   }
+
+  &:disabled,
+  &.disabled {
+    background-color: $radio-background-disabled;
+    border-color: $radio-border-disabled;
+
+    &:hover {
+      cursor: $radio-cursor-disabled;
+    }
+  }
 }
 
 input[type="radio"]:checked {
+  border: $radio-checked-border;
 
   &:after{
     @include position(absolute, 2px 0 null 0);
+    @include size($radio-checked-size $radio-checked-size);
     background-color: $radio-checked-background;
     border-radius: $radio-border-radius;
     content: " ";
-    height: $radio-checked-size;
     margin: $radio-checked-margin;
     transition: $radio-transition;
-    width: $radio-checked-size;
   }
 }
 
