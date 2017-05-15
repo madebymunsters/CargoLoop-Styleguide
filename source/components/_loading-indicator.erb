@@ -1,0 +1,78 @@
+<article  role="article" id="loading" class="guide__section-group-container">
+  <div class="guide__section-group">
+    <h3 class="title">Loading Indicator</h3>
+    <p>Are you loading a lot of content? Then make sure to throw a loading indicator on the view so the user knows that the page is not broken; it is simply trying to grab all of the elements needed to build it properply.</p>
+  </div>
+  <div class="guide__section-group">
+    <div class="loading-indicator__container">
+      <div class="loading-indicator">
+        <div class="loading-indicator__icon--1 loading-indicator__icon"></div>
+        <div class="loading-indicator__icon--2 loading-indicator__icon"></div>
+        <div class="loading-indicator__icon--3 loading-indicator__icon"></div>
+        <div class="loading-indicator__icon--4 loading-indicator__icon"></div>
+        <div class="loading-indicator__icon--5 loading-indicator__icon"></div>
+        <div class="loading-indicator__icon--6 loading-indicator__icon"></div>
+        <div class="loading-indicator__icon--7 loading-indicator__icon"></div>
+        <div class="loading-indicator__icon--8 loading-indicator__icon"></div>
+        <div class="loading-indicator__icon--9 loading-indicator__icon"></div>
+        <div class="loading-indicator__icon--10 loading-indicator__icon"></div>
+        <div class="loading-indicator__icon--11 loading-indicator__icon"></div>
+        <div class="loading-indicator__icon--12 loading-indicator__icon"></div>
+      </div>
+      <p class="text--uppercase text--grey-dark">
+        <small><b>Loading</b></small>
+      </p>
+    </div>
+  </div>
+  <div class="guide__section-group">
+    <h6 class="label">Sample Code</h6>
+<% code("html") do %>
+<!-- Basic Loading Indicator -->
+<div class="loading-indicator__container">
+  <div class="loading-indicator">
+    <ul class="loading-indicator__icons">
+      <li class="loading-indicator__icon--1 loading-indicator__icon"></li>
+      <li class="loading-indicator__icon--2 loading-indicator__icon"></li>
+      <li class="loading-indicator__icon--3 loading-indicator__icon"></li>
+      <li class="loading-indicator__icon--4 loading-indicator__icon"></li>
+      <li class="loading-indicator__icon--5 loading-indicator__icon"></li>
+      <li class="loading-indicator__icon--6 loading-indicator__icon"></li>
+      <li class="loading-indicator__icon--7 loading-indicator__icon"></li>
+      <li class="loading-indicator__icon--8 loading-indicator__icon"></li>
+      <li class="loading-indicator__icon--9 loading-indicator__icon"></li>
+      <li class="loading-indicator__icon--10 loading-indicator__icon"></li>
+      <li class="loading-indicator__icon--11 loading-indicator__icon"></li>
+      <li class="loading-indicator__icon--12 loading-indicator__icon"></li>
+    </ul>
+  </div>
+  <p class="text--uppercase">
+    <small><b>Loading</b></small>
+  </p>
+</div>
+<% end %><br/>
+  </div>
+  <div class="guide__section-group">
+    <h6 class="label">HTML Guidelines</h6>
+    <p>This table gives you a quick overview of the CSS classes that can be applied to create a loading indicator.</p>
+    <table class="table-guide">
+      <thead class="table-guide__head">
+        <th class="table-guide__head-item">Class Name</th>
+        <th class="table-guide__head-item">Usage</th>
+      </thead>
+      <tbody class="table-guide__body">
+        <tr>
+          <td class="table-guide__body-item" style="width:30%">.loading-indicator__container</td>
+          <td class="table-guide__body-item">Apply this class to parent div so the indicator and text centers within the viewport. <% code("html") do %><div class"loading-indicator__container"></div><% end %></td>
+        </tr>
+        <tr>
+          <td class="table-guide__body-item" style="width:30%">.loading-indicator</td>
+          <td class="table-guide__body-item">This should be applied to the parent element that wraps both the indicator text and animation elements. <% code("html") do %><div class"loading-indicator"></div><% end %></td>
+        </tr>
+        <tr>
+          <td class="table-guide__body-item" style="width:30%">.loading-indicator__icon</td>
+          <td class="table-guide__body-item">Apply this class to 12 empty list items to create the animating dots. <% code("html") do %><li class="loading-indicator__icon"></li><% end %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</article>
