@@ -10,12 +10,14 @@
   $popout-padding:              $spacer-delta;
   $popout-position:             absolute;
   $popout-text-align:           left;
-  $popout-transition:           opacity 0.5s ease;
+  $popout-transform:            translateY(30px);
+  $popout-transition:           all 0.5s ease;
   $popout-visibility:           hidden;
   $popout-width:                auto;
   $popout-z-index:              1;
 
   $popout-active-opacity:       1;
+  $popout-active-transform:     translateY(0px);
   $popout-active-visibility:    visible;
 
   // Structure
@@ -25,6 +27,7 @@
   opacity: $popout-opacity;
   padding: $popout-padding;
   text-align: $popout-text-align;
+  transform: $popout-transform;
   transition: $popout-transition;
   visibility: $popout-visibility;
   width: $popout-width;
@@ -32,6 +35,7 @@
 
   &.is-active {
     opacity: $popout-active-opacity;
+    transform: $popout-active-transform;
     visibility: $popout-active-visibility;
   }
 }
