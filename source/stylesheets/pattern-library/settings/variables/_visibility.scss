@@ -1,0 +1,25 @@
+// Visibility Variables Settings Stylesheet
+// ============================================
+
+$visibility-states: (
+  'small-hide': (
+    hide: true,
+    media-hide: $small,
+    media-show: $medium
+  ),
+  'small-show': (
+    hide: false,
+    media-hide: $small,
+    media-show: $medium
+  ),
+  'medium-hide': (
+    hide: true,
+    media-hide: $medium,
+    media-show: $small
+  ),
+  'medium-show': (
+    hide: false,
+    media-hide: $medium,
+    media-show: $small
+  ),
+);

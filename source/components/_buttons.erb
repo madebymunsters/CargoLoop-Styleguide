@@ -6,6 +6,9 @@
   <div class="guide__section-group">
     <ul>
       <li class="margin-bottom--charlie">
+        <button class="button--default">Button Text</button>
+      </li>
+      <li class="margin-bottom--charlie">
         <button class="button--primary">Button Text</button>
       </li>
       <li class="margin-bottom--charlie">
@@ -22,6 +25,9 @@
   <div class="guide__section-group">
     <h6 class="label">Sample Code</h6>
 <% code("html") do %>
+  <!-- Button Default -->
+  <button class="button--default">Button Text</button>
+
   <!-- Button Primary -->
   <button class="button--primary">Button Text</button>
 
@@ -47,6 +53,10 @@
         <tr>
           <td class="table-guide__body-item" style="width:30%">.button--[type]</td>
           <td class="table-guide__body-item">This should be applied to the element you are styling to look like a button. The class name should change based on the type of button being used. <% code("html") do %><button class="button--primary">Button Text</button><% end %></td>
+        </tr>
+        <tr>
+          <td class="table-guide__body-item" style="width:30%">.button--default</td>
+          <td class="table-guide__body-item">Basic button and should be used as a way for user to cancel a request.</td>
         </tr>
         <tr>
           <td class="table-guide__body-item" style="width:30%">.button--primary</td>

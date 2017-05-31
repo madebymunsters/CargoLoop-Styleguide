@@ -23,7 +23,7 @@ $tab-list-link-cords:                null null -6px null;
 $tab-list-link-color-active:         $blue-base;
 $tab-list-link-height:               1px;
 $tab-list-link-position:             absolute;
-$tab-list-link-transition:           width 0.75s ease;
+$tab-list-link-transition:           width 0.5s ease;
 $tab-list-link-width:                0;
 $tab-list-link-width-active:         100%;
 
@@ -36,6 +36,7 @@ $tab-list-link-color-dark:           $white-base;
 // Structure
 .tabs {
   display: block;
+  margin-bottom: $spacer-delta;
 }
 
 .tab {

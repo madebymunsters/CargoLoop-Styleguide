@@ -36,10 +36,12 @@ $text-alignments: (
 
 // Text Colors Map
 $type-colors: (
-  'blue':      ( $blue-base  ),
-  'grey':      ( $grey-base  ),
-  'grey-dark': ( $grey-dark  ),
-  'white':     ( $white-base )
+  'blue':      ( $blue-base   ),
+  'green':     ( $green-base  ),
+  'grey':      ( $grey-base   ),
+  'grey-dark': ( $grey-dark   ),
+  'yellow':    ( $yellow-base ),
+  'white':     ( $white-base  )
 );
 
 // Text Transforms

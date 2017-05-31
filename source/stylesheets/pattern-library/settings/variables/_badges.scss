@@ -1,18 +1,18 @@
-// Alerts Variables Settings Stylesheet
+// Badges Variables Settings Stylesheet
 // ========================================
 
-$alerts: (
-  'success': (
+$badges: (
+  'primary': (
+    background: #E3F2FE,
+    color: $blue-base
+  ),
+  'active': (
     background: #D9F8E8,
     color: $green-base,
   ),
   'caution': (
     background: #FFF6E5,
     color: $yellow-base
-  ),
-  'notification': (
-    background: #E3F2FE,
-    color: $blue-base
   ),
   'warning': (
     background: #FFE4E0,

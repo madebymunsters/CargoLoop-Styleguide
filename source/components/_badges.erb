@@ -1,0 +1,54 @@
+<article  role="article" id="badges" class="guide__section-group-container">
+  <div class="guide__section-group">
+    <h3 class="title">Badges</h3>
+    <p>Badges should be used to label new features, items that might be broken, or notify a user of a pending action. They should call just enough attention so a user notices them, but they do not need to be the dominate element on the page.</p>
+  </div>
+  <div class="guide__section-group">
+    <ul>
+      <li class="margin-bottom--charlie">
+        <div class="badge--primary">Badge Text</div>
+      </li>
+      <li class="margin-bottom--charlie">
+        <div class="badge--active">Badge Text</div>
+      </li>
+      <li class="margin-bottom--charlie">
+        <div class="badge--caution">Badge Text</div>
+      </li>
+      <li class="margin-bottom--charlie">
+        <div class="badge--warning">Badge Text</div>
+      </li>
+    </ul>
+  </div>
+  <div class="guide__section-group">
+    <h6 class="label">Sample Code</h6>
+<% code("html") do %>
+  <!-- Badge Primary -->
+  <div class="badge--primary">Badge Text</div>
+
+  <!-- Badge Active -->
+  <div class="badge--active">Badge Text</div>
+
+  <!-- Badge Caution -->
+  <div class="badge--caution">Badge Text</div>
+
+  <!-- Badge Warning -->
+  <div class="badge--warning">Badge Text</div>
+<% end %><br/>
+  </div>
+  <div class="guide__section-group">
+    <h6 class="label">HTML Guidelines</h6>
+    <p>This table gives you a quick overview of the CSS classes that can be applied to create alerts.</p>
+    <table class="table-guide">
+      <thead class="table-guide__head">
+        <th class="table-guide__head-item">Class Name</th>
+        <th class="table-guide__head-item">Usage</th>
+      </thead>
+      <tbody class="table-guide__body">
+        <tr>
+          <td class="table-guide__body-item" style="width:30%">.badge--[type]</td>
+          <td class="table-guide__body-item">Add this class to the element you are styling to look like a badge. The styles, including the text color, will then be added. <% code("html") do %><div class"badge--primary"></div><% end %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</article>

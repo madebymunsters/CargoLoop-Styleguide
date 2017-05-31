@@ -1,0 +1,22 @@
+// Spacers Mixin Settings Stylesheet
+// ========================================
+
+// Reset Mixin
+@mixin reset($type, $position) {
+  #{$type}-#{$position}: $reset-zero !important;
+}
+
+// Spacer Mixin
+@mixin spacer($type, $position, $size) {
+
+  @if $position == "all" {
+
+    @if $type == "margin" {
+      margin: $size;
+    } @else if $type == "padding" {
+      padding: $size;
+    }
+  } @else {
+    #{$type}-#{$position}: $size;
+  }
+}

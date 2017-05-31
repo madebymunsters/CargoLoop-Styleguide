@@ -2,9 +2,10 @@
 // ========================================
 
 // Variables
-$popout-cords:                30px null null 0;
+$popout-cords-sm:             0 -15px null null;
+$popout-cords-md:             30px -15px null null;
 
-$popout-inverse-cords:        null 0 20px null;
+$popout-inverse-cords:        null -15px 20px null;
 
 $popout-container-display:    inline-block;
 $popout-container-position:   relative;
@@ -18,7 +19,11 @@ $popout-pause-color:          $blue-base;
 
 // Structure
 .popout {
-  @include popout($popout-cords);
+  @include popout($popout-cords-sm);
+
+  @include media($medium) {
+    @include popout($popout-cords-md);
+  }
 
   // Popout Inverse
   &--inverse {
@@ -29,7 +34,7 @@ $popout-pause-color:          $blue-base;
   // Popout Container
   &__container {
     @include position($popout-container-position);
-    display: $popout-container-display;
+    // display: $popout-container-display;
     width: $popout-container-width;
   }
 

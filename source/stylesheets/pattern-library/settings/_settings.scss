@@ -6,22 +6,27 @@
 
 // Global Variables
 @import "variables/colors";
+@import "variables/grid";
 @import "variables/spacers";
 @import "variables/typography";
+@import "variables/visibility";
 
 // Component Variables
 @import "variables/alerts";
+@import "variables/badges";
 @import "variables/borders";
 @import "variables/buttons";
-@import "variables/grid";
 @import "variables/links";
 
 // Mixins
 @import "mixins/alert";
+@import "mixins/badge";
 @import "mixins/button";
 @import "mixins/card";
 @import "mixins/grid";
 @import "mixins/link";
 @import "mixins/misc";
 @import "mixins/popout";
+@import "mixins/spacers";
 @import "mixins/typography";
+@import "mixins/visibility";

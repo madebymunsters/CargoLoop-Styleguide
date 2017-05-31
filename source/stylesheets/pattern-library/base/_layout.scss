@@ -4,10 +4,14 @@
 // Global Styles
 html,
 body {
+  @include size(100%);
   background: $grey-light;
   margin: 0 auto;
-  width: 100%;
   -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+body {
+  transition: all 0.5s ease;
 }
 
 // Center
@@ -22,36 +26,90 @@ body {
   }
 }
 
-// Clears + Resets
-.clear { clear: both; }
-.clearfix { @include clearfix; }
+// Clears
+.clear {
+  clear: both;
+}
 
-@each $reset in $resets {
-  $position:  nth($reset, 1);
-  $zero:      nth($reset, 2);
+.clearfix {
+  @include clearfix;
+}
 
-  .margin-reset--#{$position} {
-    margin-#{$position}: $zero !important;
+// Dividers
+hr {
+  border: none;
+  border-bottom: $border-alpha;
+  margin: $spacer-delta auto;
+}
+
+// Floats
+.float {
+
+  &--left {
+    float: left;
   }
 
-  .padding-reset--#{$position} {
-    padding-#{$position}: $zero !important;
+  &--right {
+    float: right;
   }
 }
 
-.margin--reset   { margin:  0; }
-.padding--reeset { padding: 0; }
+// Resets
+@each $spacer, $keys in $spacer-positions {
+  $position:  map-get($keys, position);
+
+  // Margin Reset
+  .margin-reset--#{$position} {
+    @include reset(margin, $position);
+  }
+
+  .padding-reset--#{$position} {
+    @include reset(padding, $position);
+  }
+}
+
+.margin--reset  {
+  margin: $reset-zero;
+}
+
+.padding--reset {
+  padding: $reset-zero;
+}
 
 // Spacers
-@each $spacer in $spacers {
-  $type:   nth($spacer, 1);
-  $value:  nth($spacer, 2);
+@each $spacer, $keys in $spacer-positions {
+  $position:   map-get($keys, position);
 
-  .padding-bottom--#{$type} { padding-bottom: $value; }
-  .padding-top--#{$type}    { padding-top:    $value; }
+  @each $size, $keys in $spacer-values {
+    $size-value:  map-get($keys, value);
 
-  .margin-bottom--#{$type} { margin-bottom: $value; }
-  .margin-left--#{$type}   { margin-left:   $value; }
-  .margin-right--#{$type}  { margin-right:  $value; }
-  .margin-top--#{$type}    { margin-top:    $value; }
+    // Spacer Margin
+    .margin--#{$size} {
+      @include spacer(margin, all, $size-value);
+    }
+
+    .margin-#{$position}--#{$size} {
+      @include spacer(margin, $position, $size-value);
+    }
+
+    // Spacer Padding
+    .padding--#{$size} {
+      @include spacer(padding, all, $size-value);
+    }
+
+    .padding-#{$position}--#{$size} {
+      @include spacer(padding, $position, $size-value);
+    }
+  }
+}
+
+// Visibility
+@each $state, $keys in $visibility-states {
+  $hide:         map-get($keys, hide);
+  $media-hide:   map-get($keys, media-hide);
+  $media-show:   map-get($keys, media-show);
+
+  .visibility--#{$state} {
+    @include visibility($media-hide, $media-show, $hide);
+  }
 }

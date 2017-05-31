@@ -11,19 +11,37 @@ $spacer-delta:   15px;
 $spacer-echo:    5px;
 
 
-// Resets
-$resets: (
-  (bottom,  $reset-zero),
-  (left,    $reset-zero),
-  (right,   $reset-zero),
-  (top,     $reset-zero)
+// Spacer Positions Map
+$spacer-positions: (
+  bottom: (
+    position: bottom
+  ),
+  left: (
+    position: left
+  ),
+  right: (
+    position: right
+  ),
+  top: (
+    position: top
+  )
 );
 
-// Spacers
-$spacers: (
-  (alpha,     $spacer-alpha   ),
-  (bravo,     $spacer-bravo   ),
-  (charlie,   $spacer-charlie ),
-  (delta,     $spacer-delta   ),
-  (echo,      $spacer-echo     )
+// Spacer Values Map
+$spacer-values: (
+  alpha: (
+    value: $spacer-alpha
+  ),
+  bravo: (
+    value: $spacer-bravo
+  ),
+  charlie: (
+    value: $spacer-charlie
+  ),
+  delta: (
+    value: $spacer-delta
+  ),
+  echo: (
+    value: $spacer-echo
+  )
 );
