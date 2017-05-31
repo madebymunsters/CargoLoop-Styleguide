@@ -1,7 +1,7 @@
 // Misc Mixin Settings Stylesheet
 // ========================================
 
-// Vertical + Horizontal Align
+// Center Align
 @mixin center($horizontal: true, $vertical: true) {
   position: absolute;
   @if ($horizontal and $vertical) {
@@ -14,5 +14,12 @@
   } @else if ($vertical) {
     top: 50%;
     transform: translate(0, -50%);
+  }
+}
+
+// Float
+@mixin float($direction, $media) {
+  @include media($media) {
+    float: $direction;
   }
 }

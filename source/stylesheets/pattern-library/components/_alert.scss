@@ -13,57 +13,79 @@ $alert-icon-display:              inline-block;
 $alert-icon-margin:               2px $spacer-echo 0 0;
 $alert-icon-v-align:              top;
 
+$alert-trigger-cords:             23px 23px null null;
 $alert-trigger-cusor:             pointer;
 $alert-trigger-position:          absolute;
-$alert-trigger-right:             15px;
 
 
 // Structure
-@each $alert, $styles in $alerts  {
-  $color-1:  map-get($styles, background);
-  $color-2:  map-get($styles, color);
+.alert {
 
-  .alert--#{$alert} {
-    @include alert($color-1, $color-2);
+  // Alerts
+  @each $alert, $styles in $alerts  {
+    $color-1:  map-get($styles, background);
+    $color-2:  map-get($styles, color);
 
-    // App Icons
-    #app-icon{
-      fill: $color-2;
+    &--#{$alert} {
+      @include alert($color-1, $color-2);
+
+      // App Icons
+      #app-icon{
+        fill: $color-2;
+      }
+
+      // Alert Text
+      .alert__text {
+        @include s-foxtrot;
+        color: $color-2;
+        display: $alert-text-display;
+        margin: $alert-text-margin;
+        width: $alert-text-width;
+      }
     }
+  }
 
-    // Alert Text
-    .alert__text {
-      @include s-foxtrot;
-      color: $color-2;
-      display: $alert-text-display;
-      margin: $alert-text-margin;
-      width: $alert-text-width;
+  // Alert Icon
+  &__icon {
+    display: $alert-icon-display;
+    margin: $alert-icon-margin;
+    vertical-align: $alert-icon-v-align;
+  }
+
+  // Alert Trigger
+  &__trigger {
+    @include position($alert-trigger-position, $alert-trigger-cords);
+
+    &:hover {
+      cursor: $alert-trigger-cusor;
     }
   }
 }
-
 
 // Alert Animation
 @keyframes animate-alert {
 
+  0% {
+    opacity: 0;
+  }
   100% {
-    top: $alert-animate-top;
+    opacity: 1;
   }
 }
 
-// Alert Icon
-.alert__icon {
-  display: $alert-icon-display;
-  margin: $alert-icon-margin;
-  vertical-align: $alert-icon-v-align;
-}
 
-// Alert Trigger
-.alert__trigger {
-  @include center($horizontal: false, $vertical: true);
-  right: $alert-trigger-right;
+// Overrides for BakeSmart Application
+.alert__container {
 
-  &:hover {
-    cursor: $alert-trigger-cusor;
+  .simple-notification-wrapper {
+    @include size(100% auto);
+    @include position(relative);
+
+    // SimpleNotification always adds a position, top-right by default.
+    // Manually override those values here.
+    &.top   { top: 0;   }
+    &.right { right: 0; }
+    .simple-notification { padding: $reset-zero; }
+    .simple-notification .icon { display: none; }
   }
 }

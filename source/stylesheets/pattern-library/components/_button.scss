@@ -4,7 +4,7 @@
 // Variables
 $button-hover-cursor-disabled:      not-allowed;
 
-$button-input-height:               40px; // NOTE: Should match
+$button-input-height:               45px; // NOTE: Should match
                                           // form input height
 
 // Structure
@@ -58,4 +58,5 @@ $button-input-height:               40px; // NOTE: Should match
 // Button Input Offset
 .button--input {
   height: $button-input-height;
+  line-height: $reset-zero;
 }

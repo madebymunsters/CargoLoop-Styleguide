@@ -1,0 +1,17 @@
+// Badge Component Stylesheet
+// ========================================
+
+// Variables
+
+
+// Structure
+@each $badge, $styles in $badges {
+  $background:    map-get($styles, background);
+  $border:        map-get($styles, border);
+  $color:         map-get($styles, color);
+
+  .badge--#{$badge} {
+    @extend .button--small;
+    @include badge($background, $border, $color);
+  }
+}

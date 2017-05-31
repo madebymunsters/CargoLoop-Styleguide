@@ -17,9 +17,9 @@ $tooltip-z-index:            10;
 $tooltip-item-display:       inline-block;
 $tooltip-item-position:      relative;
 
-$tooltip-icon-cords:         -5px null null null;
+$tooltip-icon-cords:         -5px -20px null null;
 $tooltip-icon-fill:          $black-base;
-$tooltip-icon-position:      relative;
+$tooltip-icon-position:      absolute;
 $tooltip-icon-size:          15px;
 
 $tooltip-text-color:         $black-base;
@@ -29,33 +29,6 @@ $tooltip-text-shadow-spread: 0 5px 10px;
 
 
 // Structure
-.tooltip__item {
-  @include position($tooltip-item-position);
-  display: $tooltip-item-display;
-
-  &:focus,
-  &:hover .tooltip {
-    opacity: $tooltip-opacity-1;
-    visibility: $tooltip-visibiltiy;
-  }
-
-  .tooltip__label,
-  .tooltip__icon {
-    display: $tooltip-item-display;
-    cursor: help;
-  }
-
-  .tooltip__icon {
-    @include position($tooltip-icon-position, $tooltip-icon-cords);
-    height: $tooltip-icon-size;
-    width: $tooltip-icon-size;
-
-    & #app-icon {
-      fill: $tooltip-icon-fill;
-    }
-  }
-}
-
 .tooltip {
   @extend .card--shadow;
   @extend .card--md;
@@ -72,7 +45,38 @@ $tooltip-text-shadow-spread: 0 5px 10px;
     width: $tooltip-width-md;
   }
 
-  .tooltip__text {
+  &__item {
+    @include position($tooltip-item-position);
+    display: $tooltip-item-display;
+
+    &:focus,
+    &:hover .tooltip {
+      opacity: $tooltip-opacity-1;
+      visibility: $tooltip-visibiltiy;
+    }
+  }
+
+  &__label,
+  &__icon {
+    display: $tooltip-item-display;
+    cursor: help;
+  }
+
+  &__label {
+    @include position($tooltip-item-position);
+  }
+
+  &__icon {
+    @include position($tooltip-icon-position, $tooltip-icon-cords);
+    height: $tooltip-icon-size;
+    width: $tooltip-icon-size;
+
+    svg #app-icon {
+      fill: $tooltip-icon-fill;
+    }
+  }
+
+  &__text {
     @include font-type($primary-sans-serif, normal, 400);
     @include s-golf;
     line-height: $tooltip-text-line-height;

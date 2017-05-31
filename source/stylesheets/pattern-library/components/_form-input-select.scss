@@ -3,7 +3,7 @@
 
 // Variables
 $select-background-position:         98%;
-$select-background-url:              'images/icons/icons-functional/icon-arrow-down.svg';
+$select-background-url:              'icons/icons-functional/icon-arrow-down.svg';
 $select-padding:                     $spacer-delta + 5px;
 
 $select-background-inactive:         $grey-light;
@@ -20,7 +20,6 @@ select{
 
   &:disabled {
     background-color: $select-background-inactive;
-    background-image: url($select-background-url);
     border: $select-border-inactive;
     color: $grey-dark;
     cursor: not-allowed;

@@ -1,0 +1,30 @@
+// Visibility Mixin Settings Stylesheet
+// ============================================
+
+// Visibility Mixin
+@mixin visibility($media-hide, $media-show, $hide: false) {
+  // Variables
+  $visibility-hidden:       none;
+  $visibility-visible:      block;
+
+  @if $hide {
+
+    @include media($media-hide) {
+      display: $visibility-hidden;
+    }
+
+    @include media($media-show) {
+      display: $visibility-visible;
+    }
+
+  } @else {
+
+    @include media($media-hide) {
+      display: $visibility-visible;
+    }
+
+    @include media($media-show) {
+      display: $visibility-hidden;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+// Badge Mixin Settings Stylesheet
+// ========================================
+
+// Badge Mixin
+
+@mixin badge($background-value, $border-value, $color-value) {
+
+  // Properties
+  @include button($background-value, $border-value, $color-value);
+
+  &:hover,
+  &:active,
+  &:focus {
+    cursor: default;
+    background: $background-value;
+    // NOTE: Remove button hover, active, focus states.
+  }
+}

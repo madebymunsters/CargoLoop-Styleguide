@@ -12,20 +12,20 @@ $card-padding-sm:     $spacer-echo;
 // Structure
 .card {
   @include card($shadow: false);
-}
 
-// Card Modifiers
-.card--shadow {
-  @include card($shadow: true);
-}
+  // Card Modifiers
+  &--shadow {
+    @include card($shadow: true);
+  }
 
-// Card Sizes
-.card--md {
-  margin: $card-margin-md;
-  padding: $card-padding-md;
-}
+  // Card Types
+  &--md {
+    margin: $card-margin-md;
+    padding: $card-padding-md;
+  }
 
-.card--sm {
-  margin: $card-margin-sm;
-  padding: $card-padding-sm;
+  &--sm {
+    margin: $card-margin-sm;
+    padding: $card-padding-sm;
+  }
 }
