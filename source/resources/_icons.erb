@@ -1,0 +1,39 @@
+<article role="article" id="icons" class="guide__section-group-container">
+  <div class="guide__section-group">
+    <h3 class="title">Functional Icons</h3>
+    <p class="text">xji</p>
+  </div>
+  <div class="guide__section-group">
+    <ul>
+      <% data.resources_icons.icon.each do |i| %>
+        <li class="card--icon">
+          <%= image_tag "images/icons/icons-functional/#{i.image}", alt: i.title %>
+          <p class="margin-reset--bottom"><small><b><%= i.title %></b></small></p>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="guide__section-group">
+    <h6 class="label">Sample Code</h6>
+<% code("html") do %>
+  <!-- Image Icon -->
+  <img src="path/to/icons/icons-functional/icon-name.svg" />
+<% end %><br/>
+  </div>
+  <div class="guide__section-group">
+    <h6 class="label">HTML Guidelines</h6>
+    <p>This table gives you a quick overview of the HTML that can be applied to use an icon.</p>
+    <table class="table-guide">
+      <thead class="table-guide__head">
+        <th class="table-guide__head-item">Image Name</th>
+        <th class="table-guide__head-item">Usage</th>
+      </thead>
+      <tbody class="table-guide__body">
+        <tr>
+          <td class="table-guide__body-item" style="width:25%">icon-#{iconName}</td>
+          <td class="table-guide__body-item">This should be applied using an image tag. <% code("html") do %><img src="path/to/icons/icons-functional/icon-name.svg" /><% end %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</article>

@@ -97,7 +97,19 @@ title: BakeSmart - Pattern Library
   </header>
   <div class="row">
     <div class="guide__section-content">
-      Coming Soon
+      <%= partial 'resources/icons' %>
     </div>
+    <aside role="complementary" class="guide__section-aside">
+      <nav role="navigation">
+        <label class="margin-bottom--delta">Section Navigation</label>
+        <ul>
+          <% data.page_navigation.resources_navigation.each do |i| %>
+            <li>
+              <%= link_to i.title, i.url %>
+            </li>
+          <% end %>
+        </ul>
+      </nav>
+    </aside>
   </div>
 </section>

@@ -4,11 +4,14 @@
     <p class="text">Modals are used as a way for the user to interact with the view without leaving it. Modals should be single actions. Never use a modal as a step action or multi-part form.</p>
   </div>
   <div class="guide__section-group">
-    <button class="button--primary modal__trigger">Click for Modal</button>
+    <button class="button--primary modal__trigger-btn">Click for Modal</button>
     <div class="modal" aria-hidden="true">
       <div class="modal__overlay">
         <div class="modal__container">
           <div class="modal__body">
+            <% link_to '', class: 'modal__close' do %>
+              <%= inline_svg("images/icons/icons-functional/icon-close.svg", class: 'modal__trigger') %>
+            <% end %>
             <header class="modal__header">
               <h3 class="title">Modal Title</h3>
               <p class="modal-intro">Intro text lorem ipsum dolor sit ametm, quas, eaque facilis aliquid cupiditate tempora cumque ipsum accusantium illo modi commodi  minima.</p>

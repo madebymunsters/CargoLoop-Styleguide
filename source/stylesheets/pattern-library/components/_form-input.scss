@@ -93,7 +93,7 @@ textarea {
 
 // Form Input Modifiers
 input.input--error {
-  background: $white-base image-url('icons/icons-functional/icon-error.svg') no-repeat 99% center;
+  background: $white-base image-url('guide/icons/icon-error.svg') no-repeat 99% center;
   border-color: $form-input-error-background;
 
   &:hover {
@@ -102,7 +102,7 @@ input.input--error {
 }
 
 input.input--success {
-  background: $white-base image-url('icons/icons-functional/icon-success.svg') no-repeat 99% center;
+  background: $white-base image-url('guide/icons/icon-success.svg') no-repeat 99% center;
   border-color: $form-input-success-background;
 
   &:hover {

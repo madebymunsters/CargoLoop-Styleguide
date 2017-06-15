@@ -43,3 +43,7 @@ layout_navigation:
     url: '#grid'
   - title: Offsets
     url: '#offsets'
+
+resources_navigation:
+  - title: Icons
+    url: '#icons'

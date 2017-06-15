@@ -63,7 +63,7 @@ input[type="checkbox"]:checked {
 
   &:after{
     @include position(absolute, 0 0 null 0);
-    background: image-url('icons/icons-functional/icon-checkmark.svg') no-repeat center center;
+    background: image-url('guide/icons/icon-checkmark.svg') no-repeat center center;
     background-size: 10px;
     content: '';
     height: 100%;

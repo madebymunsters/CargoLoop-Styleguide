@@ -1,0 +1,51 @@
+icon:
+  - title: Arrow Down
+    image: icon-arrow-down.svg
+  - title: Arrow Up
+    image: icon-arrow-up.svg
+  - title: Bag
+    image: icon-bag.svg
+  - title: Bell
+    image: icon-bell.svg
+  - title: Calendar
+    image: icon-calendar.svg
+  - title: Chart
+    image: icon-chart.svg
+  - title: Checkmark
+    image: icon-checkmark.svg
+  - title: Close
+    image: icon-close.svg
+  - title: Coffee
+    image: icon-coffee.svg
+  - title: Error
+    image: icon-error.svg
+  - title: Graph
+    image: icon-graph.svg
+  - title: Grid
+    image: icon-grid.svg
+  - title: Help
+    image: icon-help.svg
+  - title: Inbox
+    image: icon-inbox.svg
+  - title: Jersey
+    image: icon-jersey.svg
+  - title: List
+    image: icon-list.svg
+  - title: Menu
+    image: icon-menu.svg
+  - title: Navigation
+    image: icon-navigation.svg
+  - title: Picture
+    image: icon-picture.svg
+  - title: Search
+    image: icon-search.svg
+  - title: Select
+    image: icon-select.svg
+  - title: Store
+    image: icon-store.svg
+  - title: Success
+    image: icon-success.svg
+  - title: Tag
+    image: icon-tag.svg
+  - title: User
+    image: icon-user.svg

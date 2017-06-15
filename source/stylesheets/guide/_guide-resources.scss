@@ -1,0 +1,16 @@
+// Resources Guide Stylesheet
+// ========================================
+
+// Variables
+
+
+
+// Structure
+.card--icon {
+  @extend .card;
+  @extend .card--md;
+  @extend .card--shadow;
+  @extend .text--center;
+  @include span-columns(1 of 4);
+  @include omega(4n);
+}

@@ -44,9 +44,9 @@ $modal-header-border:           $modal-body-border;
 
 $modal-title-padding:           $spacer-charlie 0;
 
-$modal-trigger-icon-position:   38px 30px null null;
-$modal-trigger-icon-transition: opacity 0.35s ease-in-out;
-$modal-trigger-icon-width:      12px;
+$modal-trigger-icon-cords:      -30px -30px null null;
+$modal-trigger-icon-fill:       $white-base;
+$modal-trigger-icon-position:   absolute;
 
 
 // Structure
@@ -74,59 +74,66 @@ $modal-trigger-icon-width:      12px;
       visibility: $modal-overlay-visibility-1;
     }
   }
-}
 
-// Modal Overlay
-.modal__overlay {
-  @include position($modal-overlay-postion, $modal-overlay-top-position null null $modal-overlay-left-position);
-  background-color: $modal-overlay-background;
-  height: $modal-overlay-dimensions;
-  overflow: scroll;
-  opacity: $modal-overlay-opacity-0;
-  transition: $modal-overlay-transition;
-  visibility: $modal-overlay-visibility-0;
-  width: $modal-overlay-dimensions;
-  z-index: $modal-overlay-z-index;
-}
-
-// Modal Body Header
-.modal__body-header {
-  border-bottom: $modal-header-border;
-  padding: 0 $modal-padding;
-
-  .title {
-    @include font-type($primary-sans-serif, normal, 400);
-    @include s-charlie;
-    color: $grey-alt;
-    margin: 0;
-    padding: $modal-title-padding;
+  // Modal Overlay
+  &__overlay {
+    @include position($modal-overlay-postion, $modal-overlay-top-position null null $modal-overlay-left-position);
+    background-color: $modal-overlay-background;
+    height: $modal-overlay-dimensions;
+    overflow: scroll;
+    opacity: $modal-overlay-opacity-0;
+    transition: $modal-overlay-transition;
+    visibility: $modal-overlay-visibility-0;
+    width: $modal-overlay-dimensions;
+    z-index: $modal-overlay-z-index;
   }
-}
 
+  // Modal Body Header
+  &__body-header {
+    border-bottom: $modal-header-border;
+    padding: 0 $modal-padding;
 
-// Modal Body
-.modal__body {
-  @include card($shadow: false);
-  @include position($modal-body-position, $modal-body-top-position $modal-body-right-position null $modal-body-left-position);
-  box-shadow: $modal-body-box-shadow;
-  height: $modal-body-height-md;
-  margin: $spacer-bravo auto;
-  opacity: $modal-overlay-opacity-0;
-  transition: $modal-body-transition;
-  width: $modal-body-width-sm;
-  visibility: $modal-overlay-visibility-0;
-  z-index: $modal-body-z-index;
-
-  @include media($medium) {
-    width: $modal-body-width-md;
+    .title {
+      @include font-type($primary-sans-serif, normal, 400);
+      @include s-charlie;
+      color: $grey-alt;
+      margin: 0;
+      padding: $modal-title-padding;
+    }
   }
-}
 
-// Modal Actions
-.modal__actions {
-  margin: $spacer-bravo 0 0;
+  // Modal Body
+  &__body {
+    @include card($shadow: false);
+    @include position($modal-body-position, $modal-body-top-position $modal-body-right-position null $modal-body-left-position);
+    box-shadow: $modal-body-box-shadow;
+    height: $modal-body-height-md;
+    margin: $spacer-bravo auto;
+    opacity: $modal-overlay-opacity-0;
+    transition: $modal-body-transition;
+    width: $modal-body-width-sm;
+    visibility: $modal-overlay-visibility-0;
+    z-index: $modal-body-z-index;
 
-  &-item {
-    @include span-columns(2 of 4);
+    @include media($medium) {
+      width: $modal-body-width-md;
+    }
+  }
+
+  // Modal Actions
+  &__actions {
+    margin: $spacer-bravo 0 0;
+
+    &-item {
+      @include span-columns(2 of 4);
+    }
+  }
+
+  &__trigger {
+    @include position($modal-trigger-icon-position, $modal-trigger-icon-cords);
+
+    #app-icon {
+      fill: $modal-trigger-icon-fill;
+    }
   }
 }

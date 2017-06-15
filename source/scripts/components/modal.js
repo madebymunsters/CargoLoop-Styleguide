@@ -1,6 +1,6 @@
 // Modal Component Interaction
 
-var $modalTrigger = $('.modal__trigger'),
+var $modalTrigger = $('.modal__trigger-btn'),
     $modal = $('.modal'),
     $modalCloseTrigger = $('.modal__close'),
     $modalActive = 'modal--active';
