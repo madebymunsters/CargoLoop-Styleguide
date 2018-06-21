@@ -21,7 +21,7 @@ $guide-layout-grid-border:      1px dashed $orange-base;
 }
 
 .guide-layout__list {
-  @include position($guide-layout-list-position);
+  position: $guide-layout-list-position;
 
   &:not(:last-child) {
     margin: $guide-layout-list-margin;
@@ -39,10 +39,15 @@ $guide-layout-grid-border:      1px dashed $orange-base;
 .guide-layout__item-lg,
 .guide-layout__item-md,
 .guide-layout__item-sm {
-  @include position($guide-layout-list-position, -40px null null null);
+  position: $guide-layout-list-position;
+  top: -40px;
 
   &::before {
-    @include position(absolute, 0 0 0 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background: $guide-layout-grid-bg;
     border-left: $guide-layout-grid-border;
     border-right: $guide-layout-grid-border;

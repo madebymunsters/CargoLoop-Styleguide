@@ -32,7 +32,8 @@ $tooltip-text-shadow-spread: 0 5px 10px;
 .tooltip {
   @extend .card--shadow;
   @extend .card--md;
-  @include position($tooltip-position, $tooltip-offset);
+  position: $tooltip-position;
+  bottom: 20px;
   opacity: $tooltip-opacity-0;
   right: calc(100% - 235px);
   transition: $tooltip-transition;
@@ -46,7 +47,7 @@ $tooltip-text-shadow-spread: 0 5px 10px;
   }
 
   &__item {
-    @include position($tooltip-item-position);
+    position: $tooltip-item-position;
     display: $tooltip-item-display;
 
     &:focus,
@@ -63,11 +64,13 @@ $tooltip-text-shadow-spread: 0 5px 10px;
   }
 
   &__label {
-    @include position($tooltip-item-position);
+    position: $tooltip-item-position;
   }
 
   &__icon {
-    @include position($tooltip-icon-position, $tooltip-icon-cords);
+    position: $tooltip-item-position;
+    top: -5px;
+    right: -20px;
     height: $tooltip-icon-size;
     width: $tooltip-icon-size;
 

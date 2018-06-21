@@ -1,3 +1,3 @@
-# BakeSmart-Styleguide
+# CargoLoop-Styleguide
 
-See it live [here](https://projectvalkyrie.github.io/BakeSmart-Styleguide/).
+See it live [here](https://madebymunsters.github.io/CargoLoop-Styleguide/).

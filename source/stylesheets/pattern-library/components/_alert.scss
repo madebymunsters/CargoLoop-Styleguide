@@ -74,12 +74,13 @@ $alert-trigger-position:          absolute;
 }
 
 
-// Overrides for BakeSmart Application
+// Overrides for CargoLoop Application
 .alert__container {
 
   .simple-notification-wrapper {
-    @include size(100% auto);
-    @include position(relative);
+    height: auto;
+    width: 100%;
+    position: relative;
 
     // SimpleNotification always adds a position, top-right by default.
     // Manually override those values here.

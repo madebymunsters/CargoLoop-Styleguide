@@ -33,7 +33,7 @@ $popout-pause-color:          $blue-base;
 
   // Popout Container
   &__container {
-    @include position($popout-container-position);
+    position: $popout-container-position;
     // display: $popout-container-display;
     width: $popout-container-width;
   }

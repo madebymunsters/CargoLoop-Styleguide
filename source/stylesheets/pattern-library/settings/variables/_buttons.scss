@@ -4,29 +4,49 @@
 // Buttons Standard
 $buttons: (
   'primary': (
-    background-color: $orange-base,
-    border-color: darken($orange-base, 15%),
+    background-color: $blue-light,
+    border-color: $blue-light,
     color: $white-base
   ),
   'secondary': (
-    background-color: $blue-base,
-    border-color: darken($blue-base, 15%),
+    background-color: $green-base,
+    border-color: $green-base,
     color: $white-base
   ),
   'danger': (
     background-color: $red-base,
-    border-color: darken($red-base, 20%),
+    border-color: $red-base,
     color: $white-base
   ),
   'default': (
     background-color: $grey-base,
-    border-color: $grey-alt-2,
-    color: $grey-alt
+    border-color: $grey-base,
+    color: $black-base
+  ),
+  'orange': (
+    background-color: $orange-base,
+    border-color: $orange-base,
+    color: $white-base
+  ),
+  'blue-base': (
+    background-color: $blue-base,
+    border-color: $blue-base,
+    color: $white-base
   ),
   'disabled': (
     background-color: $grey-base,
     border-color: $grey-base,
     color: $grey-alt-2
+  ),
+  'carfax': (
+    background-color: #3777BC,
+    border-color: #3777BC,
+    color: $white-base
+  ),
+  'autocheck': (
+    background-color: #104279,
+    border-color: #104279,
+    color: $white-base
   )
 );
 

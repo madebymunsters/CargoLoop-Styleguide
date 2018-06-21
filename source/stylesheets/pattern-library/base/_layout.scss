@@ -18,7 +18,7 @@ body {
 .center {
 
   &__parent {
-    @include position(relative);
+    position: relative;
   }
 
   &__child--vert {

@@ -1,0 +1,63 @@
+/* Vehicles Styles */
+.left-nav {
+  width: 200px;
+  background: $white-base;
+  height: 100vh;
+  padding: 0;
+  position: fixed;
+  a.button--primary {
+    margin: 10px;
+    width: calc(100% - 20px);
+  }
+}
+
+.app-content {
+  margin-left:200px;
+  float: left;
+  width: calc(100% - 200px);
+}
+
+
+.search {
+  background: $grey-base;
+  padding: 20px;
+  width: 100%;
+}
+
+.tables {
+  padding: $spacer-delta;
+}
+
+.details--card {
+  padding: $spacer-delta;
+}
+
+header {
+  &.page--header {
+    margin: $spacer-delta 0;
+    padding: $spacer-delta;
+    .page--title {
+      display: inline-block;
+      h3 {
+        margin-top: 10px;
+        margin-bottom: 0;
+      }
+    }
+    .page--actions {
+      float: right;
+      display: inline-block;
+    }
+  }
+}
+
+footer {
+  &.page--footer {
+    margin: 0;
+    padding: 0 $spacer-delta;
+    .page--actions {
+      float: right;
+      display: inline-block;
+      margin-bottom: $spacer-charlie;
+    }
+  }
+}

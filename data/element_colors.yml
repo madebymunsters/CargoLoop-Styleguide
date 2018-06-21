@@ -1,46 +1,56 @@
 colors:
   primary:
-    - title: Orange Base
-      variable_value: $orange-base
-      hex_value: '#FF6600'
-      rgba_value: 255, 102, 0, 1
-      color: 'orange-base'
-    - title: Blue Base
-      variable_value: $blue-base
-      hex_value: '#42A5F5'
-      rgba_value: 66, 165, 245, 1
-      color: 'blue-base'
+    - title: Red Base
+      variable_value: $red-base
+      hex_value: '#FF5A4D'
+      rgba_value: 255, 90, 77, 1
+      color: 'red-base'
+    - title: Blue Light
+      variable_value: $blue-light
+      hex_value: '#5CA9FB'
+      rgba_value: 92, 169, 251, 1
+      color: 'blue-light'
+    - title: Green Base
+      variable_value: $green-base
+      hex_value: '#47D78D'
+      rgba_value: 71, 215, 141, 1
+      color: 'green-base'
   secondary:
     - title: Black Base
       variable_value: $black-base
-      hex_value: '#344750'
-      rgba_value: 52, 71, 80, 1
+      hex_value: '#1B2431'
+      rgba_value: 27, 36, 49, 1
       color: 'black-base'
     - title: Yellow Base
       variable_value: $yellow-base
-      hex_value: '#FFAA00'
-      rgba_value: 255, 170, 0, 1
+      hex_value: '#F9B65A'
+      rgba_value: 249, 182, 90, 1
       color: 'yellow-base'
-    - title: Green Base
-      variable_value: $green-base
-      hex_value: '#00CF63'
-      rgba_value: 0, 207, 99, 1
-      color: 'green-base'
-    - title: Red Base
-      variable_value: $red-base
-      hex_value: '#FC472E'
-      rgba_value: 252, 71, 46, 1
-      color: 'red-base'
-    - title: Pink Base
-      variable_value: $pink-base
-      hex_value: '#F23154'
-      rgba_value: 242, 49, 84, 1
-      color: 'pink-base'
+    - title: Orange Base
+      variable_value: $orange-base
+      hex_value: '#FB8948'
+      rgba_value: 251, 137, 72, 1
+      color: 'orange-base'
     - title: Purple Base
       variable_value: $purple-base
       hex_value: '#5D62CF'
       rgba_value: 93, 98, 207, 1
       color: 'purple-base'
+    - title: Purple Light
+      variable_value: $purple-light
+      hex_value: '#CF81C4'
+      rgba_value: 207, 129, 196, 1
+      color: 'purple-light'
+    - title: Blue Base
+      variable_value: $blue-base
+      hex_value: '#5D758D'
+      rgba_value: 93, 117, 141, 1
+      color: 'blue-base'
+    - title: Blue Dark
+      variable_value: $blue-dark
+      hex_value: '#273142'
+      rgba_value: 39, 49, 66, 1
+      color: 'blue-dark'
   accent:
     - title: White Base
       variable_value: $white-base
@@ -49,26 +59,26 @@ colors:
       color: 'white-base'
     - title: Grey Light
       variable_value: $grey-light
-      hex_value: '#F3F5F7'
-      rgba_value: 243, 245, 247, 1
+      hex_value: '#F5F7F9'
+      rgba_value: 245, 247, 249, 1
       color: 'grey-light'
     - title: Grey Base
       variable_value: $grey-base
-      hex_value: '#ECEFF1'
-      rgba_value: 236, 239, 241, 1
+      hex_value: '#E1E6EB'
+      rgba_value: 225, 230, 235, 1
       color: 'grey-base'
     - title: Grey Dark
       variable_value: $grey-dark
-      hex_value: '#72919E'
-      rgba_value: 114, 145, 158, 1
+      hex_value: '#83909A'
+      rgba_value: 131, 144, 154, 1
       color: 'grey-dark'
     - title: Grey Alt
       variable_value: $grey-alt
-      hex_value: '#ADBEC5'
-      rgba_value: 173, 190, 197, 1
+      hex_value: '#737E86'
+      rgba_value: 115, 126, 134, 1
       color: 'grey-alt'
     - title: Grey Alt 2
       variable_value: $grey-alt-2
-      hex_value: '#CDD8DD'
-      rgba_value: 205, 216, 221, 1
+      hex_value: '#313B3F'
+      rgba_value: 49, 59, 63, 1
       color: 'grey-alt-2'

@@ -25,14 +25,15 @@ $chip-text-container-display:     inline-block;
   // Chip Container
   &__container {
     @include clearfix;
-    @include position($chip-container-position);
+    position: $chip-container-position;
     margin: $chip-container-margin;
   }
 
   // Chip Avatar
   &__avatar {
-    @include position($chip-avatar-position);
-    @include size($chip-avatar-size $chip-avatar-size);
+    position: $chip-avatar-position;
+    height: $chip-avatar-size;
+    width: $chip-avatar-size;
     background-color: $chip-avatar-bg;
     border-radius: $chip-avatar-border-radius;
     display: $chip-avatar-display;

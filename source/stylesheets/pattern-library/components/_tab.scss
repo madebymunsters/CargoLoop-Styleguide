@@ -5,12 +5,12 @@
 // Variables
 $tab-margin-top:                     $spacer-charlie;
 
-$tab-list-border:                    $border-bravo;
+$tab-list-border:                    $border-alpha;
 $tab-list-padding:                   0;
 
 $tab-list-item-align:                left;
 $tab-list-item-color:                $black-base;
-$tab-list-item-color-active:         $blue-base;
+$tab-list-item-color-active:         $blue-light;
 $tab-list-item-margin:               $spacer-charlie;
 $tab-list-item-opacity:              0.5;
 $tab-list-item-padding:              0 0 $spacer-echo;
@@ -18,10 +18,10 @@ $tab-list-item-position:             relative;
 
 $tab-list-item-opacity-active:       1;
 
-$tab-list-link-bg:                   $orange-base;
+$tab-list-link-bg:                   $blue-light;
 $tab-list-link-cords:                null null -6px null;
 $tab-list-link-color-active:         $blue-base;
-$tab-list-link-height:               1px;
+$tab-list-link-height:               3px;
 $tab-list-link-position:             absolute;
 $tab-list-link-transition:           width 0.5s ease;
 $tab-list-link-width:                0;
@@ -50,8 +50,8 @@ $tab-list-link-color-dark:           $white-base;
   // Tab Nav Item
   &__item {
     @include font-type($primary-sans-serif, normal, 400);
-    @include position($tab-list-item-position);
-    @include s-golf;
+    position: $tab-list-item-position;
+    @include s-foxtrot;
     color: $tab-list-item-color;
     cursor: pointer;
     display: inline-block;
@@ -60,7 +60,8 @@ $tab-list-link-color-dark:           $white-base;
     text-align: $tab-list-item-align;
 
     &::before {
-      @include position($tab-list-link-position, $tab-list-link-cords);
+      position: $tab-list-link-position;
+      bottom: -6px;
       background-color: $tab-list-link-bg;
       content: " ";
       display: block;
@@ -76,6 +77,7 @@ $tab-list-link-color-dark:           $white-base;
     &.is-active {
       opacity: $tab-list-item-opacity-active;
       font-weight: 700;
+      color: $tab-list-item-color-active;
 
       &::before {
         width: $tab-list-link-width-active;

@@ -24,8 +24,8 @@ $loading-indicator-icon-size-2:         15%;
 
 // Structure
 .loading-indicator {
-  @include position($loading-indicator-position);
-  @include size($loading-indicator-size);
+  position: $loading-indicator-position;
+  width: $loading-indicator-size;
   margin: $loading-indicator-margin;
 
   &__container {
@@ -33,11 +33,13 @@ $loading-indicator-icon-size-2:         15%;
   }
 
   &__icon {
-    @include position($loading-indicator-icon-position, $loading-indicator-icon-cords);
-    @include size($loading-indicator-icon-size);
+    position: $loading-indicator-icon-position;
+    top: 0;
+    left: 0;
+    width: $loading-indicator-icon-size;
 
     &::before {
-      @include size($loading-indicator-icon-size-2);
+      width: $loading-indicator-icon-size-2;
       animation: $loading-indicator-icon-animation;
       background-color: $loading-indicator-icon-bg;
       border-radius: $loading-indicator-icon-border-radius;

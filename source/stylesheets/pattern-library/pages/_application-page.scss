@@ -2,6 +2,24 @@
 // ========================================
 
 // Variables
+$app-page-cords:                    70px null null null;
+$app-page-margin:                   $spacer-bravo 0 0 0;
+$app-page-padding:                  0 $spacer-delta;
+$app-page-position:                 relative;
+
+$app-page-section-margin:           0 0 $spacer-alpha;
+
+$app-section-margin-top:            $spacer-alpha;
+
+$app-section-header-margin:         $spacer-charlie;
 
 
 // Structure
+.app {
+  @include position($app-page-position, $app-page-cords);
+}
+
+.app__section {
+  @include clearfix;
+  margin: $app-page-section-margin;
+}

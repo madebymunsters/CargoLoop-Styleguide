@@ -27,8 +27,9 @@ $checkbox-label-cursor:                 pointer;
 // Structure
 input[type="checkbox"],
 input[type="checkbox"]:focus {
-  @include position($checkbox-position);
-  @include size($checkbox-dimensions $checkbox-dimensions);
+  position: $checkbox-position;
+  height: $checkbox-dimensions;
+  width: $checkbox-dimensions;
   appearance: none;
   -webkit-appearance: none;
   background-color: $checkbox-background;
@@ -62,7 +63,10 @@ input[type="checkbox"]:checked {
   border: $checkbox-checked-border;
 
   &:after{
-    @include position(absolute, 0 0 null 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
     background: image-url('guide/icons/icon-checkmark.svg') no-repeat center center;
     background-size: 10px;
     content: '';
@@ -74,11 +78,11 @@ input[type="checkbox"]:checked {
 }
 
 .checkbox--label {
-  @include position(relative);
+  position: relative;
   cursor: $checkbox-label-cursor;
 
   &.checkbox--label__small {
-    @include position(relative);
+    position: relative;
     @include s-foxtrot;
   }
 

@@ -16,6 +16,17 @@ $card-padding-sm:     $spacer-echo;
   // Card Modifiers
   &--shadow {
     @include card($shadow: true);
+    header {
+      margin-left: -$spacer-charlie;
+      margin-right: -$spacer-charlie;
+      margin-top: 0px;
+      margin-bottom: $spacer-charlie;
+      padding: 0 0 $spacer-echo;
+      border-bottom: 1px solid $grey-base;
+      h4 {
+        padding: 0 $spacer-charlie;
+      }
+    }
   }
 
   // Card Types

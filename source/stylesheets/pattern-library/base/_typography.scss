@@ -39,6 +39,12 @@ h6 {
   margin-bottom: $spacer-delta;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  span {
+    font-weight: 100;
+    font-size: 65%;
+    display: block;
+    margin-top: 10px;
+  }
 }
 
 h1 { @include s-alpha;   }
@@ -59,7 +65,12 @@ p {
 }
 
 small {
-  @include s-hotel;
+  @include s-golf;
+  line-height: 1.4;
+  margin: 10px 0 0 0;
+  display: block;
+  font-style: italic;
+  color: $grey-alt;
 }
 
 // Base List Styles

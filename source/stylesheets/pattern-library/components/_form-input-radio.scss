@@ -27,8 +27,9 @@ $radio-cursor-disabled:              not-allowed;
 // Structure
 input[type="radio"],
 input[type="radio"]:focus {
-  @include position($radio-position);
-  @include size($radio-dimensions $radio-dimensions);
+  position: $radio-position;
+  height: $radio-dimensions;
+  width: $radio-dimensions;
   appearance: none;
   -webkit-appearance: none;
   background-color: $radio-background;
@@ -61,8 +62,12 @@ input[type="radio"]:checked {
   border: $radio-checked-border;
 
   &:after{
-    @include position(absolute, 2px 0 null 0);
-    @include size($radio-checked-size $radio-checked-size);
+    position: absolute;
+    top: 2px;
+    right: 0;
+    left: 0;
+    height: $radio-checked-size;
+    width: $radio-checked-size;
     background-color: $radio-checked-background;
     border-radius: $radio-border-radius;
     content: " ";
@@ -72,14 +77,15 @@ input[type="radio"]:checked {
 }
 
 .radio--label {
-  @include position(relative);
+  position: relative;
 
   &.radio--label__small {
-    @include position(relative);
+    position: relative;
     @include s-foxtrot;
   }
 
   span {
-    @include position(absolute, 2px null null null);
+    position: absolute;
+    top: 2px;
   }
 }

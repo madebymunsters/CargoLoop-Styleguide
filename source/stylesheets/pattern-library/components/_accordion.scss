@@ -1,0 +1,18 @@
+.accordion {
+  border-top: 1px solid $grey-base;
+  ul {
+    li {
+      color: $black-base;
+      font-size: $s-delta;
+      font-weight: 900;
+      padding: 10px;
+      border-bottom: 1px solid $grey-base;
+      span {
+        float: right;
+        color: $grey-alt;
+        font-size: $s-foxtrot;
+        font-weight: 100;
+      }
+    }
+  }
+}

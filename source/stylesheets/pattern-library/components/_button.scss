@@ -60,3 +60,8 @@ $button-input-height:               45px; // NOTE: Should match
   height: $button-input-height;
   line-height: $reset-zero;
 }
+
+.button--autocheck, .button--carfax {
+  padding: 0;
+  margin-bottom: 20px;
+}

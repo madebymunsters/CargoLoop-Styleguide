@@ -5,26 +5,28 @@
 $app-topbar-bg:                     $white-base;
 $app-topbar-box-shadow:             0 2px 10px 0 rgba(205,216,221,0.30);
 $app-topbar-display:                inline-block;
-$app-topbar-padding-sm:             $spacer-charlie $spacer-delta;
+$app-topbar-padding-sm:             0;
 $app-topbar-position:               fixed;
 $app-topbar-width:                  100%;
 $app-topbar-z-index:                100002;
+$app-topbar-max-height:             70px;
 
-$app-topbar-logo-width:             160px;
+$app-topbar-logo-width:             200px;
+$app-topbar-logo-margin-r:          30px;
 
+$app-topbar-left-float:             left;
 $app-topbar-right-float:            right;
 
-$app-topbar-item-margin-t:          10px;
+$app-topbar-item-margin-t:          25px;
 $app-topbar-item-margin-r:          $spacer-charlie;
 $app-topbar-item-position:          relative;
 
-$app-topbar-link-color:             $grey-alt-2;
-$app-topbar-link-color-active:      $orange-base;
+$app-topbar-link-color:             $grey-alt;
+$app-topbar-link-color-active:      $blue-light;
 $app-topbar-link-line-height:       0;
 
-$app-topbar-link-border-bg:         $orange-base;
-$app-topbar-link-border-box-shadow: 0 -1px 4px 0 rgba(255, 102, 0, 0.30);
-$app-topbar-link-border-cords:      null null -36px null;
+$app-topbar-link-border-bg:         $blue-light;
+$app-topbar-link-border-cords:      null null -28px null;
 $app-topbar-link-border-display:    block;
 $app-topbar-link-border-height:     2px;
 $app-topbar-link-border-position:   absolute;
@@ -40,27 +42,41 @@ $app-topbar-mobile-menu-transition: all 0.5s ease;
 
 // Structure
 .application-topbar {
-  @include position($app-topbar-position, 0 null null null);
+  position: $app-topbar-position;
+  top: 0;
   background-color: $app-topbar-bg;
   box-shadow: $app-topbar-box-shadow;
   padding: $app-topbar-padding-sm;
   width: $app-topbar-width;
   z-index: $app-topbar-z-index;
+  max-height: $app-topbar-max-height;
 }
 
 // Application Topbar Left
 .application-topbar__left {
   display: $app-topbar-display;
+  float: $app-topbar-left-float;
+  margin-right: $app-topbar-logo-margin-r;
 
   .logo {
     width: $app-topbar-logo-width;
   }
 }
 
+// Application Topbar Middle
+.application-topbar__middle {
+  display: $app-topbar-display;
+  float: $app-topbar-left-float;
+}
+
 // Application Topbar Right
 .application-topbar__right {
   display: $app-topbar-display;
   float: $app-topbar-right-float;
+  .chip__container {
+    margin-top: 15px;
+    float: right;
+  }
 }
 
 // Application Topbar List
@@ -72,13 +88,10 @@ $app-topbar-mobile-menu-transition: all 0.5s ease;
   }
 
   .application-topbar__item {
-    @include position($app-topbar-item-position);
+    position: $app-topbar-item-position;
     display: $app-topbar-display;
     margin-top: $app-topbar-item-margin-t;
-
-    &:not(:last-child) {
-      margin-right: $app-topbar-item-margin-r;
-    }
+    margin-right: $app-topbar-item-margin-r;
   }
 }
 
@@ -94,9 +107,9 @@ $app-topbar-mobile-menu-transition: all 0.5s ease;
     color: $app-topbar-link-color-active;
 
     &::after {
-      @include position($app-topbar-link-border-position, $app-topbar-link-border-cords);
+      position: $app-topbar-link-border-position;
+      bottom: -28px;
       background-color: $app-topbar-link-border-bg;
-      box-shadow: $app-topbar-link-border-box-shadow;
       content: " ";
       display: $app-topbar-link-border-display;
       height: $app-topbar-link-border-height;

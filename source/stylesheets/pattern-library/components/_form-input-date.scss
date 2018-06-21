@@ -1,0 +1,28 @@
+// Form Input Search Component Stylesheet
+// ========================================
+
+// Variables
+$search-background-image:          'icons/icons-functional/icon-calendar.svg';
+$search-background-image-position: 10px;
+$search-background-image-repeat:   no-repeat;
+$search-background-image-size:     $spacer-delta;
+$search-background-image-padding:  0 0 0 ($spacer-charlie + 5px) !important;
+
+$search-button-cancel-cords:       null 5px null null;
+$search-button-cancel-position:    relative;
+
+
+// Stucture
+input[type="date"],
+.input--date {
+  background-image: image-url($search-background-image);
+  background-position: $search-background-image-position;
+  background-repeat: $search-background-image-repeat;
+  background-size: $search-background-image-size;
+  padding: $search-background-image-padding;
+
+  // Position Search Cancel Button
+  &::-webkit-search-cancel-button {
+    @include position($search-button-cancel-position, $search-button-cancel-cords);
+  }
+}

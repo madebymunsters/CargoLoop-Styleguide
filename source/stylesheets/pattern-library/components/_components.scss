@@ -1,6 +1,7 @@
 // Component Stylesheets
 // ========================================
 
+@import "accordion";
 @import "alert";
 @import "badge";
 @import "button";
@@ -8,13 +9,18 @@
 @import "chip";
 @import "form-input";
 @import "form-input-checkbox";
+@import "form-input-file";
+@import "form-input-date";
 @import "form-input-radio";
 @import "form-input-search";
 @import "form-input-select";
 @import "form-label";
 @import "link";
 @import "loading-indicator";
+@import "log";
 @import "modal";
 @import "popout";
+@import "photos";
 @import "tab";
+@import "table";
 @import "tooltip";

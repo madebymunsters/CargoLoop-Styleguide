@@ -3,19 +3,19 @@
 
 $alerts: (
   'success': (
-    background: #D9F8E8,
-    color: $green-base,
+    background: $green-base,
+    color: $black-base,
   ),
   'caution': (
-    background: #FFF6E5,
-    color: $yellow-base
+    background: $yellow-base,
+    color: $black-base
   ),
   'notification': (
-    background: #E3F2FE,
-    color: $blue-base
+    background: $blue-base,
+    color: $black-base
   ),
   'warning': (
-    background: #FFE4E0,
-    color: $red-base
+    background: $red-base,
+    color: $black-base
   )
 );

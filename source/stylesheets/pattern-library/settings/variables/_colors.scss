@@ -2,36 +2,36 @@
 // ========================================
 
 // Black
-$black-base:   #344750;
+$black-base:   #1B2431;
 
 // Blue
-$blue-base:    #42A5F5;
+$blue-light:   #5CA9FB;
+$blue-base:    #5D758D;
+$blue-dark:    #273142;
 
 // Green
-$green-base:   #00CF63;
+$green-base:   #47D78D;
 
 // Grey
-$grey-light:   #F3F5F7;
-$grey-base:    #ECEFF1;
-$grey-dark:    #72919E;
+$grey-light:   #F5F7F9;
+$grey-base:    #E1E6EB;
+$grey-dark:    #83909A;
 
-$grey-alt:     #ADBEC5;
-$grey-alt-2:   #CDD8DD;
+$grey-alt:     #737E86;
+$grey-alt-2:   #313B3F;
 
 // Orange
-$orange-base:  #FF6600;
-
-// Pink
-$pink-base:    #F23154;
+$orange-base:  #FB8948;
 
 // Purple
-$purple-base:  #5D62CF;
+$purple-light: #CF81C4;
+$purple-base:  #8383DF;
 
 // Yellow
-$yellow-base:  #FFAA00;
+$yellow-base:  #F9B65A;
 
 // Red
-$red-base:     #FC472E;
+$red-base:     #FF5A4D;
 
 // White
 $white-base:   #FFFFFF;
@@ -40,7 +40,9 @@ $white-base:   #FFFFFF;
 // Main Palette List
 $colors: (
   black-base:    $black-base,
+  blue-light:    $blue-light,
   blue-base:     $blue-base,
+  blue-dark:     $blue-dark,
   green-base:    $green-base,
   grey-light:    $grey-light,
   grey-base:     $grey-base,
@@ -48,7 +50,7 @@ $colors: (
   grey-alt:      $grey-alt,
   grey-alt-2:    $grey-alt-2,
   orange-base:   $orange-base,
-  pink-base:     $pink-base,
+  purple-light:  $purple-light,
   purple-base:   $purple-base,
   yellow-base:   $yellow-base,
   red-base:      $red-base,

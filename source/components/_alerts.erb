@@ -6,7 +6,7 @@
   <div class="guide__section-group">
     <% data.components_alerts.alerts.each do |i| %>
       <figure class="alert--<%= i.type %>">
-        <%= inline_svg('images/icons/icons-functional/icon-bell.svg', class: 'alert__icon') %>
+        <%= inline_svg('images/icons/icons-functional/icon-success.svg', class: 'alert__icon') %>
         <p class="alert__text"><%= i.text %></p>
         <% link_to '#' do %>
           <%= inline_svg('images/icons/icons-functional/icon-close.svg', class: 'alert__trigger') %>
@@ -18,7 +18,7 @@
     <h6 class="label">Sample Code</h6>
 <% code("html") do %>
 <figure class="alert--success">
-  <%= inline_svg('images/icons/icons-functional/icon-bell.svg', class: 'alert__icon') %>
+  <%= inline_svg('images/icons/icons-functional/icon-success.svg', class: 'alert__icon') %>
 
   <p class="alert__text">Alert text message goes right here.</p>
 

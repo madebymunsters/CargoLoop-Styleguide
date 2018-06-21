@@ -23,7 +23,8 @@ $ele-color-icon-margin:   0 0 $spacer-delta;
 }
 
 .element-color-icon {
-  @include size(100% $ele-color-icon-height);
+  width: 100%;
+  height: $ele-color-icon-height;
   display: $ele-color-icon-display;
   margin: $ele-color-icon-margin;
 }
