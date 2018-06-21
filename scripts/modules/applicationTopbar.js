@@ -1,0 +1,1 @@
+var $mobileTrigger=$(".application-topbar__mobile-trigger"),$mobileMenu=$(".application-topbar__mobile-menu"),active="active";$mobileTrigger.on("click",function(i){i.preventDefault(),$(this).parents().siblings($mobileMenu).toggleClass(active)});
